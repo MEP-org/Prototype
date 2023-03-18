@@ -4,11 +4,11 @@ import StudentNav from '../Student/StudentNav'
 
 function PublicExercices(props){
 
-    const { user } = props
+    const MyNav = props.user === 'professor' ? ProfNav : StudentNav
 
     return (
         <>
-            {user === 'professor' ? <ProfNav active='public-exercices'/> : <StudentNav active='public-exercices'/>}
+            <MyNav active="public-exercices"/>
             <h1>PublicExercices</h1>
         </>
     )
