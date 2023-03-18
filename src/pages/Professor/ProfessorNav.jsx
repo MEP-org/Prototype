@@ -54,12 +54,12 @@ function ProfessorNav(props){
                         {user.email}
                         </span>
                     </Dropdown.Header>
-                    <Dropdown.Item>
-                        <Link to="/" className="flex">
+                    <Link to="/" >
+                        <Dropdown.Item className="w-full">
                             <FaSignOutAlt className="mr-2 mt-1" />
                             Sign out
-                        </Link>
-                    </Dropdown.Item>
+                        </Dropdown.Item>
+                    </Link>
                     </Dropdown>
                     <Navbar.Toggle />
                 </div>
@@ -67,7 +67,7 @@ function ProfessorNav(props){
                     <Navbar.Link as={Link} to="/professor/classes" className='text-base' active={active === 'classes'}>
                         Classes
                     </Navbar.Link>
-                    <Navbar.Link as={Link} to="/professor/public-exercices" className='text-base' active={active === 'public exercices'}>
+                    <Navbar.Link as={Link} to="/professor/public-exercices" className='text-base' active={active === 'public-exercices'}>
                         Public Exercices
                     </Navbar.Link>
                     <Navbar.Link as={Link} to="/professor/exercices" className='text-base' active={active === 'exercices'}>

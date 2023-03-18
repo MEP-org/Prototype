@@ -7,8 +7,10 @@ import Home from './pages/Home/Home';
 import SignIn from './pages/SignIn/SignIn';
 
 import StudentHome from './pages/Student/Home/Home.jsx'
-
+import StudentAssignments from './pages/Student/Assignments/Assignments.jsx'
+import PublicExercices from './pages/PublicExercices/PublicExercices';
 import ProfessorHome from './pages/Professor/Classes/Classes.jsx'
+import ProfessorExercices from './pages/Professor/Exercices/Exercices.jsx'
 
 
 export const MyContext = createContext();
@@ -31,9 +33,13 @@ const router = createBrowserRouter([
   
   { path: "/student", element: <StudentHome /> },
   { path: "/student/home", element: <StudentHome /> },
+  { path: "/student/public-exercices", element: <PublicExercices user='student'/> },
+  { path: "/student/assignments", element: <StudentAssignments /> },
 
   { path: "/professor", element: <ProfessorHome /> },
   { path: "/professor/classes", element: <ProfessorHome /> },
+  { path: "/professor/public-exercices", element: <PublicExercices user='professor'/> },
+  { path: "/professor/exercices", element: <ProfessorExercices /> },
 ]);
 
 
