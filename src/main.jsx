@@ -31,22 +31,27 @@ function App() {
   );
 }
 
-const router = createBrowserRouter([
-  { path: "/", element: <Home /> },
-  { path: "/signin", element: <SignIn /> },
-  
-  { path: "/student", element: <StudentHome /> },
-  { path: "/student/home", element: <StudentHome /> },
-  { path: "/student/public-exercices", element: <PublicExercices user='student'/> },
-  { path: "/student/assignments", element: <StudentAssignments /> },
+const router = createBrowserRouter(
+  [
+    { path: "/", element: <Home /> },
+    { path: "/signin", element: <SignIn /> },
+    
+    { path: "/student", element: <StudentHome /> },
+    { path: "/student/home", element: <StudentHome /> },
+    { path: "/student/public-exercices", element: <PublicExercices user='student'/> },
+    { path: "/student/assignments", element: <StudentAssignments /> },
 
-  { path: "/professor", element: <ProfessorHome /> },
-  { path: "/professor/classes", element: <ProfessorHome /> },
-  { path: "/professor/public-exercices", element: <PublicExercices user='professor'/> },
-  { path: "/professor/exercices", element: <ProfessorExercices /> },
+    { path: "/professor", element: <ProfessorHome /> },
+    { path: "/professor/classes", element: <ProfessorHome /> },
+    { path: "/professor/public-exercices", element: <PublicExercices user='professor'/> },
+    { path: "/professor/exercices", element: <ProfessorExercices /> },
 
-  { path: "*", element: <Error /> },
-]);
+    { path: "*", element: <Error /> },
+  ],
+  {
+    basename: "/Prototype"
+  }
+);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

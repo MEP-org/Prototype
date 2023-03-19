@@ -6,7 +6,7 @@ npm run dev
 npm run build
 ```
 
-<http://localhost:5173/>
+<http://localhost:5173/Prototype>
 
 
 ## Components
