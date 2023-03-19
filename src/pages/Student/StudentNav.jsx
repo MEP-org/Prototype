@@ -1,17 +1,32 @@
-import React from 'react'
-import { Link } from "react-router-dom";
+import React, { useContext, useEffect } from 'react';
+import { Link, useNavigate } from "react-router-dom";
 import logo from '../../assets/logo.svg'
 import { Navbar, Dropdown, Avatar } from 'flowbite-react'
 import {FaSignOutAlt} from 'react-icons/fa'
+
+import { MyContext } from '../../main';
 
 
 function StudentNav(props){
 
     const { active } = props
+    const { myObject, setMyObject } = useContext(MyContext);
+    const { user } = myObject
+    const navigate = useNavigate();
 
-    const user = {
-        name: "Jack Connor",
-        email: "jackconnor@example.com"
+    useEffect(() => {
+        if (myObject.type !== 'student') {
+            navigate('/')
+        }
+    }, [myObject])
+
+    const handleLogout = () => {
+        setMyObject({ 
+            user : { name : null , email : null },
+            type : null,
+            token : null 
+          });
+        navigate('/');
     }
 
     const nameInitials = () => {
@@ -54,12 +69,10 @@ function StudentNav(props){
                         {user.email}
                         </span>
                     </Dropdown.Header>
-                    <Link to="/" >
-                        <Dropdown.Item className="w-full">
-                            <FaSignOutAlt className="mr-2 mt-1" />
-                            Sign out
-                        </Dropdown.Item>
-                    </Link>
+                    <Dropdown.Item className="w-full" onClick={handleLogout}>
+                        <FaSignOutAlt className="mr-2 mt-1" />
+                        Sign out
+                    </Dropdown.Item>
                     </Dropdown>
                     <Navbar.Toggle />
                 </div>
