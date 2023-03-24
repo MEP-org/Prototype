@@ -1,6 +1,7 @@
 import React from 'react'
-import  HomeNav from './HomeNav.jsx'
 import Banner from './Banner.jsx'
+import  HomeNav from './HomeNav.jsx'
+import ParticlesBg from './ParticlesBg.jsx'
 
 
 function Home(){
@@ -8,11 +9,9 @@ function Home(){
 
     return (
         <>
+            <ParticlesBg />
             <HomeNav />
-
-            <div className='container mx-auto mt-8'>
-                <Banner />
-            </div>
+            <Banner/>
         </>
     )
 }

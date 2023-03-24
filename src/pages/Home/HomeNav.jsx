@@ -6,7 +6,7 @@ import logo from '../../assets/logo.svg'
 function HomeNav(){
     return (
         <>
-            <Navbar fluid={true} rounded={true} className='drop-shadow-md'>
+            <Navbar fluid={true} className='drop-shadow-md sticky top-0'>
                 <Navbar.Brand >
                     <img
                         src= {logo}
