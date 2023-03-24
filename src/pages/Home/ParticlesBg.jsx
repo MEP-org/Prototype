@@ -18,7 +18,7 @@ function ParticlesBg(){
     }, []);
 
     return (
-        <div className='background-home w-full h-full fixed ' style={{'zIndex': '-1'}}>
+        <div className='background-home w-full h-full fixed'>
             <Particles
                 id="tsparticles"
                 init={particlesInit}
