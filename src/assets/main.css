@@ -41,6 +41,10 @@ body{
     align-items: center;
 }
 
+.background-home {
+    background-image: radial-gradient(circle, #030d1c, #031730, #001e44, #022459, #12296d);
+}
+
 .card{
     border: 1px solid #e2e8f0;
     border-radius: 0.5rem;
