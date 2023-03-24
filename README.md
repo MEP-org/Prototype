@@ -31,3 +31,4 @@ export default Name
 - https://flowbite-react.com/
 - https://react-icons.github.io/react-icons/
 - https://reactrouter.com/en/main
+- https://michalsnik.github.io/aos/

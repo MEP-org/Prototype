@@ -1,0 +1,55 @@
+{
+    "classes": [
+        {
+            "id": 1,
+            "name": "ML-C1",
+            "memberCount": 8,
+            "professor": {
+                "id": 1,
+                "name": "Robert Smith"
+            },
+            "students": [
+                {
+                    "Nmec": "100001",
+                    "name": "Jack Connor"
+                },
+                {
+                    "Nmec": "100002",
+                    "name": "Student 2"
+                },
+                {
+                    "Nmec": "100003",
+                    "name": "Student 3"
+                },
+                {
+                    "Nmec": "100004",
+                    "name": "Student 4"
+                },
+                {
+                    "Nmec": "100005",
+                    "name": "Student 5"
+                },
+                {
+                    "Nmec": "100006",
+                    "name": "Student 6"
+                },
+                {
+                    "Nmec": "100007",
+                    "name": "Student 7"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "ML-C2",
+            "memberCount": 9,
+            "professor": {
+                "id": 1,
+                "name": "Robert Smith"
+            },
+            "students": [
+
+            ]
+        }
+    ]
+}

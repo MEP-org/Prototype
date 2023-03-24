@@ -8,7 +8,7 @@ function PublicExercices(props){
 
     return (
         <>
-            <MyNav active="public-exercices"/>
+            <MyNav active="publicExercices"/>
             <h1>PublicExercices</h1>
         </>
     )

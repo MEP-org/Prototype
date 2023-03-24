@@ -1,29 +1,16 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Button } from 'flowbite-react'
 import { useNavigate } from "react-router-dom";
-import { MyContext } from '../../main';
 
 function SignIn(){
-
-    const { myObject, setMyObject } = useContext(MyContext);
 
     const navigate = useNavigate();
 
     const handleProfClick = () => {
-        setMyObject({
-            user : { name : 'Robert Smith' , email : 'robertsmith@example.com' },
-            type : 'professor',
-            token: null
-        })
         navigate('/professor')
     }
 
     const handleStudentClick = () => {
-        setMyObject({
-            user : { name : 'Jack Connor', email: 'jackconnor@example.com' },
-            type : 'student',
-            token: null
-        })
         navigate('/student')
     }
 

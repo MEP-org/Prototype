@@ -4,7 +4,6 @@
 
 body{
     color: #0f172a; /* text-slate-900 */
-    /* background-color: #eff6ff;  */
 }
 
 .logo-font {
@@ -14,3 +13,36 @@ body{
 /* div{
     border: greenyellow 2px solid;
 } */
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+@media (min-width: 640px) {
+    .container {
+        width: 100%;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}
+@media (min-width: 1024px) {
+    .container {
+        width: 80%;
+    }
+}
+
+.center{
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1);
+}
