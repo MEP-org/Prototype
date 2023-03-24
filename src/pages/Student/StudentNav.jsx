@@ -1,38 +1,33 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import logo from '../../assets/logo.svg'
 import { Navbar, Dropdown, Avatar } from 'flowbite-react'
 import {FaSignOutAlt} from 'react-icons/fa'
 
-import { MyContext } from '../../main';
-
 
 function StudentNav(props){
 
     const { active } = props
-    const { myObject, setMyObject } = useContext(MyContext);
-    const { user } = myObject
     const navigate = useNavigate();
+    const session = {
+        user : { name : 'Jack Connor', email: 'jackconnor@example.com' },
+        type : 'student',
+    }
 
     useEffect(() => {
-        if (myObject.type !== 'student') {
+        if (session.type !== 'student') {
             navigate('/')
         }
-    }, [myObject])
+    }, [session])
 
     const handleLogout = () => {
-        setMyObject({ 
-            user : { name : null , email : null },
-            type : null,
-            token : null 
-          });
         navigate('/');
     }
 
     const nameInitials = () => {
-        const name = user.name.split(" ")
+        const name = session.user.name.split(" ")
         return name[0][0] + name[ name.length - 1 ][0]
-    }   
+    }    
 
     return (
         <>
@@ -63,10 +58,10 @@ function StudentNav(props){
                     >
                     <Dropdown.Header>
                         <span className="block text-sm">
-                        {user.name}
+                        {session.user.name}
                         </span>
                         <span className="block truncate text-sm font-medium">
-                        {user.email}
+                        {session.user.email}
                         </span>
                     </Dropdown.Header>
                     <Dropdown.Item className="w-full" onClick={handleLogout}>
@@ -80,7 +75,7 @@ function StudentNav(props){
                     <Navbar.Link as={Link} to="/student/home" className='text-base' active={active === 'home'}>
                         Home
                     </Navbar.Link>
-                    <Navbar.Link as={Link} to="/student/public-exercices" className='text-base' active={active === 'public-exercices'}>
+                    <Navbar.Link as={Link} to="/student/publicExercices" className='text-base' active={active === 'publicExercices'}>
                         Public Exercices
                     </Navbar.Link>
                     <Navbar.Link as={Link} to="/student/assignments" className='text-base' active={active === 'assignments'}>
