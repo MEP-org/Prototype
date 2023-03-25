@@ -13,7 +13,7 @@ function Classes(){
     useEffect(() => {
         setLoading(true);
         const profId = 1;
-        ClassesAPI.get(profId)
+        ClassesAPI.getByProfessor(profId)
         .then((data) => {
             setClasses(data);
         })
