@@ -12,24 +12,11 @@ function Filters(props){
         }
     });
 
-    const handleSearch = (e) => {
+    const handleFilter = (e, key) => {
+        console.log(e.target.value);
         setFilter({
             ...filter,
-            'title': e.target.value
-        })
-    }
-
-    const handleFilter = (e) => {
-        setFilter({
-            ...filter,
-            'filter': e.target.value
-        })
-    }
-
-    const handleSort = (e) => {
-        setFilter({
-            ...filter,
-            'sort': e.target.value
+            [key]: e.target.value
         })
     }
 
@@ -45,7 +32,7 @@ function Filters(props){
                         type="text"
                         rightIcon={FaSearch}
                         placeholder="Search"
-                        onChange={handleSearch}
+                        onChange={(e) => handleFilter(e, 'title')}
                     />
                 </div>
 
@@ -54,7 +41,7 @@ function Filters(props){
                     <div className='mb-2' />
                     <Select 
                         id="filter" 
-                        onChange={handleFilter}
+                        onChange={(e) => handleFilter(e, 'filter')}
                     >
                         <option value="all">All</option>
                         {classes.map((classe) => {
@@ -70,7 +57,7 @@ function Filters(props){
                     <div className='mb-2' />
                     <Select 
                         id="sort" 
-                        onChange={handleSort}
+                        onChange={(e) => handleFilter(e, 'sort')}
                     >
                         <option value="recent">Recent</option>
                         <option value="oldest">Oldest</option>
