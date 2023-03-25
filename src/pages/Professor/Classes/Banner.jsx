@@ -1,7 +1,7 @@
 import React from 'react'
 import {FaPlusCircle} from 'react-icons/fa'
 
-function AddClass(){
+function Banner(){
 
     return (
         <>
@@ -27,4 +27,4 @@ function AddClass(){
     )
 }
 
-export default AddClass
+export default Banner
