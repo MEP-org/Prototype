@@ -46,20 +46,20 @@ function StudentsTable(props){
     return (
         <>
             <div>
-                <Table striped={true}>
-                    <Table.Head>
-                        <Table.HeadCell>
+                <Table striped={true} hoverable={true} style={{ fontSize: '1em' }}>
+                    <Table.Head style={{ fontSize: '1.2em', height: '3em' }}>
+                        <Table.HeadCell className='w-1/6'>
                             NMEC
                         </Table.HeadCell>
                         <Table.HeadCell>
                             Nome
                         </Table.HeadCell>
-                        <Table.HeadCell>
+                        <Table.HeadCell className='w-1/12'>
                         <span className="sr-only">
                             Edit
                         </span>
                         </Table.HeadCell>
-                        <Table.HeadCell>
+                        <Table.HeadCell className='w-1/12'>
                         <span className="sr-only">
                             Delete
                         </span>

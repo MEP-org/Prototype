@@ -15,19 +15,19 @@ function ManageClass(){
     return (
         <>
             <ProfessorNav />
-            <div className='w-full container mt-8'>
-                <div data-aos='fade-up' className='font-bold text-5xl mb-4'>
-                    Classe {myClass.name}
-                </div>
-                <div data-aos='fade-up' className='relative flex'>
-                    <ImportClassButton />
-                    <div className='w-4'></div>
-                    <AddStudentButton />
-                </div>
-                <div className='h-12'></div>
-                <MembersQuantity quantity={myClass.students.length} />
-                <div className='h-4'></div>
-                <StudentsTable myClass={myClass.students} />
+            <div data-aos='fade-up' className='w-full container mt-8'>
+                    <div className='font-bold text-5xl mb-4'>
+                        Classe {myClass.name}
+                    </div>
+                    <div className='relative flex'>
+                        <ImportClassButton />
+                        <div className='w-4'></div>
+                        <AddStudentButton />
+                    </div>
+                    <div className='h-12'></div>
+                    <MembersQuantity quantity={myClass.students.length} />
+                    <div className='h-4'></div>
+                    <StudentsTable myClass={myClass.students} />
             </div>
             {/* {JSON.stringify(myClass, null, 2)} */}
         </>
