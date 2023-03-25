@@ -10,31 +10,31 @@
             },
             "students": [
                 {
-                    "Nmec": "100001",
+                    "Nmec": 100001,
                     "name": "Jack Connor"
                 },
                 {
-                    "Nmec": "100002",
+                    "Nmec": 100002,
                     "name": "Student 2"
                 },
                 {
-                    "Nmec": "100003",
+                    "Nmec": 100003,
                     "name": "Student 3"
                 },
                 {
-                    "Nmec": "100004",
+                    "Nmec": 100004,
                     "name": "Student 4"
                 },
                 {
-                    "Nmec": "100005",
+                    "Nmec": 100005,
                     "name": "Student 5"
                 },
                 {
-                    "Nmec": "100006",
+                    "Nmec": 100006,
                     "name": "Student 6"
                 },
                 {
-                    "Nmec": "100007",
+                    "Nmec": 100007,
                     "name": "Student 7"
                 }
             ]
@@ -51,5 +51,41 @@
 
             ]
         }
-    ]
+    ],
+
+    
+    "student_classes": [
+        {
+            "id": 1,
+            "Nmec": 100001,
+            "name": "ML-C1",
+            "memberCount": 8,
+            "professor": {
+                "id": 1,
+                "name": "Robert Smith"
+            }
+        },
+        {
+            "id": 2,
+            "Nmec": 100001,
+            "name": "ML-C2",
+            "memberCount": 9,
+            "professor": {
+                "id": 1,
+                "name": "Robert Smith"
+            }
+        }
+    ],
+
+
+    "student_stats": {
+        "total_submissions": 10,
+        "total_exercises": 5,
+        "next_exercise": {
+            "id": 1,
+            "name": "Exercise 1",
+            "deadline": "2023/04/01"
+        },
+        "position": 3
+    }
 }
