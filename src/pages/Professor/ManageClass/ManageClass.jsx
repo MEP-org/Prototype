@@ -1,5 +1,10 @@
 import React from 'react'
 import { useLocation } from "react-router-dom";
+import ProfessorNav from '../ProfessorNav.jsx';
+import ImportClassButton from './ImportClassButton.jsx';
+import AddStudentButton from './AddStudentButton.jsx';
+import StudentsTable from './StudentsTable.jsx';
+import MembersQuantity from './MembersQuantity.jsx';
 
 function ManageClass(){
 
@@ -9,8 +14,22 @@ function ManageClass(){
 
     return (
         <>
-            <h1>ManageClass</h1>
-            {JSON.stringify(myClass, null, 2)}
+            <ProfessorNav />
+            <div data-aos='fade-up' className='w-full container mt-8'>
+                    <div className='font-bold text-5xl mb-4'>
+                        Classe {myClass.name}
+                    </div>
+                    <div className='relative flex'>
+                        <ImportClassButton />
+                        <div className='w-4'></div>
+                        <AddStudentButton />
+                    </div>
+                    <div className='h-12'></div>
+                    <MembersQuantity quantity={myClass.students.length} />
+                    <div className='h-4'></div>
+                    <StudentsTable myClass={myClass.students} />
+            </div>
+            {/* {JSON.stringify(myClass, null, 2)} */}
         </>
     )
 }
