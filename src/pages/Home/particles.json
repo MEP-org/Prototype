@@ -1,6 +1,7 @@
 {
     "particles" : {
         "fpsLimit": 120,
+        "pauseOnBlur": true,
         "interactivity": {
             "events": {
                 "onHover": {
@@ -56,11 +57,8 @@
                 "type": "circle"
             },
             "size": {
-                "value": { "min": 1, "max": 5 }
+                "value": { "min": 3, "max": 7 }
             }
-        },
-        "zIndex": {
-            "value": 1
         },
         "detectRetina": true
     }
