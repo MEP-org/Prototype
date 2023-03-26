@@ -5,7 +5,6 @@ import Filters from './Filters';
 import Results from './Results';
 import { ExercicesAPI } from "../../../api/ExercicesAPI";
 import AssignmentCard from './AssignmentCard';
-import Filtersv2 from './Filtersv2';
 
 function Assignments(){
 
@@ -65,8 +64,7 @@ function Assignments(){
             <div className='container py-8'>
                 <Banner />
                 <div className='mb-10' />
-                {/* <Filters filter={filter} setFilter={setFilter} exercices={exercices}/> */}
-                <Filtersv2 filter={filter} setFilter={setFilter} exercices={exercices}/>
+                <Filters filter={filter} setFilter={setFilter} exercices={exercices}/>
                 <div className='mb-10' />
                 <Results exercices={exercices} loading={loading} filter={filter}/>
 

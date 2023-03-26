@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaArrowRight, FaBook, FaGlobeAmericas } from "react-icons/fa";
+import { Card } from 'flowbite-react';
 
 function ExerciceCard(props) {
 
@@ -8,8 +9,7 @@ function ExerciceCard(props) {
     return ( 
         <>
 
-            <div className="p-6 mb-5 relative bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-
+            <Card className='mb-4'>
                 <div className='grid grid-cols-12'>
                     <div className='lg:col-span-10 col-span-12'>
                         <p className="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
@@ -74,8 +74,12 @@ function ExerciceCard(props) {
                         <FaArrowRight />
                     </button>
                 </div>
+            </Card>
 
-            </div>
+           
+
+
+
 
 
         </>

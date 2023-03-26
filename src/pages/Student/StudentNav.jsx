@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import logo from '../../assets/logo.svg'
-import { Navbar, Dropdown, Avatar } from 'flowbite-react'
+import { Navbar, Dropdown, Avatar, Flowbite, DarkThemeToggle } from 'flowbite-react'
 import {FaSignOutAlt} from 'react-icons/fa'
 
 
@@ -31,7 +31,7 @@ function StudentNav(props){
 
     return (
         <>
-            <Navbar fluid={true} rounded={true} className='drop-shadow-md'>
+            <Navbar fluid={true} className='drop-shadow-md'>
                 <div>
                 <Navbar.Brand as={Link} to="/student">
                     <img
@@ -45,6 +45,11 @@ function StudentNav(props){
                 </Navbar.Brand>
                 </div>
                 <div className="flex md:order-2">
+                    <div className='pl-10'/>
+                    <Flowbite>
+                        <DarkThemeToggle />
+                    </Flowbite>
+                    <div className="ml-4" />
                     <Dropdown
                     arrowIcon={false}
                     inline={true}
