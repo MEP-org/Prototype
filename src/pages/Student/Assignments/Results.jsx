@@ -40,7 +40,7 @@ function Results(props){
         return (
             <>
                 <div data-aos='fade-up' className='delay-200'>
-                    <div className='grid grid-cols-12 gap-10'>
+                    <div className='grid lg:grid-cols-2 gap-4'>
                         {filteredExercices.map((exercice) => {
                             return (
                                 <AssignmentCard exercice={exercice} key={exercice.id} />

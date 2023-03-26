@@ -3,6 +3,7 @@
         {
             "id": 1,
             "name": "ML-C1",
+            "image": "https://venturebeat.com/wp-content/uploads/2021/10/shutterstock_1703415496-1.jpg?w=1200&strip=all",
             "memberCount": 8,
             "professor": {
                 "id": 1,
@@ -42,6 +43,7 @@
         {
             "id": 2,
             "name": "ML-C2",
+            "image": "https://media.springernature.com/w580h326/nature-cms/uploads/collections/AI_and_machine_learning-00afb90f3d21234fd0f207243f60aa8e.jpg",
             "memberCount": 9,
             "professor": {
                 "id": 1,
@@ -59,6 +61,7 @@
             "id": 1,
             "Nmec": 100001,
             "name": "ML-C1",
+            "image": "https://venturebeat.com/wp-content/uploads/2021/10/shutterstock_1703415496-1.jpg?w=1200&strip=all",
             "memberCount": 8,
             "professor": {
                 "id": 1,
@@ -69,6 +72,7 @@
             "id": 2,
             "Nmec": 100001,
             "name": "ML-C2",
+            "image": "https://media.springernature.com/w580h326/nature-cms/uploads/collections/AI_and_machine_learning-00afb90f3d21234fd0f207243f60aa8e.jpg",
             "memberCount": 9,
             "professor": {
                 "id": 1,

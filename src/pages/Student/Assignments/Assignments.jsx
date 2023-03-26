@@ -4,8 +4,36 @@ import Banner from './Banner';
 import Filters from './Filters';
 import Results from './Results';
 import { ExercicesAPI } from "../../../api/ExercicesAPI";
+import AssignmentCard from './AssignmentCard';
 
 function Assignments(){
+
+    const exerciseMock = [
+        {
+            "id": 1,
+            "title": "Titanic - Machine Learning from Disaster",
+            "description": "Subtitle orem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit",
+            "published": "2023-04-01",
+            "deadline": "2023-05-01",
+            "studentClass": {
+                "id": 1,
+                "name": "ML-C1"
+            }
+        },
+        {
+            "id": 2,
+            "title": "Predicting a Biological Response",
+            "description": "Subtitle orem ipsum dolor sit amet",
+            "published": "2024-04-01",
+            "deadline": "2025-05-01",
+            "studentClass": {
+                "id": 3,
+                "name": "TAA-C1"
+            }
+        }
+
+    ] 
+
 
     const [filter, setFilter] = useState({
         'title': '',
@@ -39,6 +67,20 @@ function Assignments(){
                 <Filters filter={filter} setFilter={setFilter} exercices={exercices}/>
                 <div className='mb-10' />
                 <Results exercices={exercices} loading={loading} filter={filter}/>
+
+
+                {/* HOW TO USE THE CARD */}
+                Testing (delete later)
+                <div className='grid lg:grid-cols-2 gap-4'>
+                    <div>
+                        <AssignmentCard content={exerciseMock[0]} />
+                    </div>
+
+                    <div>
+                        <AssignmentCard content={exerciseMock[1]} />
+                    </div>
+                </div>
+                
             </div>
         </>
     )
