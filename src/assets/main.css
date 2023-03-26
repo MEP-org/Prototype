@@ -49,7 +49,35 @@ body{
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
 }
 
-.card{
+.mouse-pointer {
+    cursor: pointer;
+}
+
+.my-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1A56DB;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+    padding: 0 1rem 0 1rem;
+}
+
+.my-btn:hover{
+    background-color: #1e40af;
+}
+
+
+
+
+/* ------- Student HomePage - Stats ------- */
+
+.student-stats{
     border: 1px solid #e2e8f0;
     border-radius: 0.5rem;
     box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1);
@@ -58,29 +86,11 @@ body{
     transition: all 0.3s ease;
 }
 
-.card:hover{
+.student-stats:hover{
     box-shadow: 0 1px 3px 0 rgba(0,0,0,0.3);
 }
 
-.my-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #2563eb;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 600;
-    text-align: center;
-    transition: all 0.3s ease;
-}
-
-.my-btn:hover{
-    background-color: #1e40af;
-}
-
-.intro-sections {
+.student-stats-sections {
     background-image: linear-gradient(to right, #3b82f6, #2563eb);
     border-radius: 0.5rem;
     display: flex;

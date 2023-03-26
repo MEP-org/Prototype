@@ -1,6 +1,7 @@
 import React from 'react'
+import {Spinner} from 'flowbite-react';
 import {FaUserFriends} from 'react-icons/fa'
-import Class from './Class';
+import ClassCard from './ClassCard';
 
 function Classes(props){
 
@@ -8,9 +9,11 @@ function Classes(props){
 
     const renderLoading = () => {
         return (
-            <div className='card p-4 mb-4 delay-200' data-aos='fade-up' >
-                Loading...
-            </div>
+            <>
+                <div data-aos='fade-up' className='w-fit mx-auto delay-200'>
+                    <Spinner size='xl' />
+                </div> 
+            </>
         )
     }
 
@@ -19,7 +22,7 @@ function Classes(props){
         return (
             <div className='grid sm:grid-cols-2 lg:grid-cols-4 gap-4' data-aos='fade-up'>
                 {classes.map((item) => 
-                    <Class key={item.id} item={item} />
+                    <ClassCard key={item.id} item={item} />
                 )}
             </div>
         );

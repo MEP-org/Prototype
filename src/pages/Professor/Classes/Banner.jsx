@@ -9,7 +9,7 @@ function Banner(){
                 <div className='font-bold text-5xl mb-4'>
                     Classes
                 </div>
-                <div className='text-xl mb-4 w-1/2'>
+                <div className='text-lg mb-4 lg:w-1/2 text-justify'>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     <p/>
                     At vero eos et accusamus et iusto odio dignissimos ducimus qui
