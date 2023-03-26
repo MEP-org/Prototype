@@ -5,7 +5,7 @@ import ExerciceCard from './ExerciceCard';
 
 function Results(props){
 
-    const {exercices, loading, filter} = props;
+    const {exercices, loading} = props;
 
     const renderLoading = () => {
         return (
@@ -25,18 +25,10 @@ function Results(props){
         )
     }
 
-    const exercicesFilter = (exercice) => {
-        // TODO: Implement filter
-        console.log(filter, exercice);
-        return exercice.id < 1
-    }   
-
     const renderExercices = () => {
-        let filteredExercices = exercices.filter(exercicesFilter);
-        if(filteredExercices.length === 0){
+        if(exercices.length === 0){
             return noResults();
         }
-        // TODO: Implement sort
         return (
             <>
                 <div data-aos='fade-up' className='delay-200'>
@@ -50,12 +42,13 @@ function Results(props){
         )
     }
 
+
     return (
         <>
             <div data-aos='fade-up' className='delay-100' >
                 <div className='font-semibold text-3xl mb-10 flex items-center'>
                     <FaFileAlt className='mr-2' size={25} />
-                    Exercices
+                    Public Exercices
                 </div>
             </div>
             {loading ? renderLoading() : renderExercices()}

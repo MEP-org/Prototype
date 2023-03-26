@@ -39,7 +39,7 @@ function AssignmentCard(props){
                         </div>
 
                         <div className="text-gray-700 dark:text-gray-400">
-                            <span className="inline-block text-xs font-light pr-1">Published at</span>
+                            <span className="inline-block text-xs font-light pr-1">Due to</span>
                             <span className="inline-block text-xs font-bold">
                                 {deadline}
                             </span>

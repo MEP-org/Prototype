@@ -1,6 +1,6 @@
 import React from 'react'
 import { Spinner } from 'flowbite-react';
-import { FaBook } from 'react-icons/fa';
+import { FaFileAlt } from 'react-icons/fa';
 import AssignmentCard from './AssignmentCard';
 
 function Results(props){
@@ -55,9 +55,9 @@ function Results(props){
     return (
         <>
             <div data-aos='fade-up' className='delay-100' >
-                <div className='font-bold text-3xl mb-10'>
-                    <FaBook className='inline-block mr-2' />
-                    Exercices
+                <div className='font-semibold text-3xl mb-10 flex items-center'>
+                    <FaFileAlt className='inline-block mr-2' size={25} />
+                    Assignments
                 </div>
             </div>
             {loading ? renderLoading() : renderExercices()}

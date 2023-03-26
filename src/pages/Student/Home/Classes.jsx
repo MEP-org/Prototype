@@ -31,8 +31,8 @@ function Classes(props){
     return (
         <>
             <div data-aos='fade-up' className='delay-100' >
-                <div className='font-bold text-3xl mb-4 delay-300'>
-                    <FaUserFriends className='inline-block mr-2' />
+                <div className='font-semibold text-3xl mb-4 flex items-center delay-300'>
+                    <FaUserFriends className='inline-block mr-2' size={23} />
                     Classes
                 </div>
             </div>
