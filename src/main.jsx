@@ -42,7 +42,7 @@ const router = createBrowserRouter(
     { path: "*", element: <Error /> },
   ],
   {
-    basename: "/Prototype"
+    basename: "/Prototype/"
   }
 );
 

@@ -1,26 +1,29 @@
 import React from 'react'
-import {Spinner} from 'flowbite-react';
+import {Spinner, Card} from 'flowbite-react';
 import {FaCheckCircle, FaFileAlt, FaHourglassHalf, FaGraduationCap} from 'react-icons/fa'
 
 
 
-function Intro(props){
+function Dashboard(props){
 
     const {stats, loading} = props;
 
     const renderLoading = () => {
         return (
-            <div data-aos='fade-up' className="student-stats m-5 mx-auto delay-200">
-                <Spinner size='xl' />
-            </div>
+            <Card data-aos='fade-up' className='mt-4 mb-8 delay-200'>
+                <div className='w-fit mx-auto'>
+                    <Spinner size='xl' />
+                </div> 
+            </Card>
         )
     }
 
     const renderStats = () => {
 
         return (
-            <>        
-                <div className="student-stats mt-5 mb-8 grid sm:grid-cols-2 lg:sm:grid-cols-4 gap-8">
+            <>
+            <Card className='mt-4 mb-8'>
+                <div className="grid sm:grid-cols-2 lg:sm:grid-cols-4 gap-8">
 
                     <div>
                         <div className="h-9 student-stats-sections">
@@ -76,14 +79,14 @@ function Intro(props){
                     </div>
                 
                 </div>
+            </Card>
             </>
         );
     }
 
     return (
         <>
-
-            <p className="font-bold text-4xl">Welcome, Jack Connor!</p>
+            <p data-aos='fade-up' className="font-bold text-4xl delay-100">Welcome, Jack Connor!</p>
 
             {loading ? renderLoading() : renderStats()}
 
@@ -91,4 +94,4 @@ function Intro(props){
     )
 }
 
-export default Intro
+export default Dashboard

@@ -10,7 +10,7 @@ function Classes(props){
     const renderLoading = () => {
         return (
             <>
-                <div data-aos='fade-up' className='w-fit mx-auto delay-200'>
+                <div data-aos='fade-up' className='w-fit mx-auto delay-400'>
                     <Spinner size='xl' />
                 </div> 
             </>
@@ -20,7 +20,7 @@ function Classes(props){
     const renderClasses = () => {
 
         return (
-            <div className='grid sm:grid-cols-2 lg:grid-cols-4 gap-4' data-aos='fade-up'>
+            <div data-aos='fade-up' className='grid sm:grid-cols-2 lg:grid-cols-4 gap-4'>
                 {classes.map((item) => 
                     <ClassCard key={item.id} item={item} />
                 )}
@@ -31,7 +31,7 @@ function Classes(props){
     return (
         <>
             <div data-aos='fade-up' className='delay-100' >
-                <div className='font-bold text-3xl mb-4 delay-200'>
+                <div className='font-bold text-3xl mb-4 delay-300'>
                     <FaUserFriends className='inline-block mr-2' />
                     Classes
                 </div>

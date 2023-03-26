@@ -52,7 +52,6 @@ function StudentNav(props){
                     arrowIcon={false}
                     inline={true}
                     label={<Avatar
-                        className='ml-20'
                         placeholderInitials = {nameInitials()}
                         rounded={true}
                         status="online"

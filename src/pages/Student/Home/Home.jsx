@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import MyNav from '../StudentNav'
 import { ClassesAPI } from "../../../api/ClassesAPI";
 import Classes from "./Classes";
-import Intro from "./Intro";
+import Dashboard from "./Dashboard";
 
 // temporary data
 import {student_stats} from '../../../api/data.json';
@@ -35,7 +35,7 @@ function Home(){
             <MyNav active="home"/>
 
             <div className='w-full container mt-8'>
-                <Intro stats={stats} loading={loadingStats}/>
+                <Dashboard stats={stats} loading={loadingStats}/>
                 <Classes classes={classes} loading={loadingClasses} />
             </div>
         </>

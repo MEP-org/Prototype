@@ -74,19 +74,6 @@
 
 /* ------- Student HomePage - Stats ------- */
 
-.student-stats{
-    border: 1px solid #e2e8f0;
-    border-radius: 0.5rem;
-    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1);
-    padding: 15px;
-    background-color: #f9fafb;
-    transition: all 0.3s ease;
-}
-
-.student-stats:hover{
-    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.3);
-}
-
 .student-stats-sections {
     background-image: linear-gradient(to right, #3b82f6, #2563eb);
     border-radius: 0.5rem;
