@@ -5,6 +5,7 @@ import Filters from './Filters';
 import Results from './Results';
 import { ExercicesAPI } from "../../../api/ExercicesAPI";
 import AssignmentCard from './AssignmentCard';
+import Filtersv2 from './Filtersv2';
 
 function Assignments(){
 
@@ -64,7 +65,8 @@ function Assignments(){
             <div className='container py-8'>
                 <Banner />
                 <div className='mb-10' />
-                <Filters filter={filter} setFilter={setFilter} exercices={exercices}/>
+                {/* <Filters filter={filter} setFilter={setFilter} exercices={exercices}/> */}
+                <Filtersv2 filter={filter} setFilter={setFilter} exercices={exercices}/>
                 <div className='mb-10' />
                 <Results exercices={exercices} loading={loading} filter={filter}/>
 
@@ -72,13 +74,8 @@ function Assignments(){
                 {/* HOW TO USE THE CARD */}
                 Just to see how they look like (delete later)
                 <div className='grid lg:grid-cols-2 gap-4'>
-                    <div>
-                        <AssignmentCard content={exercisesMock[0]} />
-                    </div>
-
-                    <div>
-                        <AssignmentCard content={exercisesMock[1]} />
-                    </div>
+                    <AssignmentCard content={exercisesMock[0]} />
+                    <AssignmentCard content={exercisesMock[1]} />
                 </div>
                 
             </div>

@@ -78,13 +78,8 @@ function Exercices(){
                 {/* HOW TO USE THE CARD */}
                 Just to see how they look like (delete later)
                 <div className=''>
-                    <div>
-                        <ExerciceCard content={exercisesMock[0]} />
-                    </div>
-
-                    <div>
-                        <ExerciceCard content={exercisesMock[1]} />
-                    </div>
+                    <ExerciceCard content={exercisesMock[0]} />
+                    <ExerciceCard content={exercisesMock[1]} />
                 </div>
 
             </div>
