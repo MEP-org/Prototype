@@ -32,7 +32,7 @@ function Results(props){
         return (
             <>
                 <div data-aos='fade-up' className='delay-200'>
-                    {filteredExercices.map((exercice) => {
+                    {exercices.map((exercice) => {
                         return (
                             <ExerciceCard exercice={exercice} key={exercice.id} />
                         )
