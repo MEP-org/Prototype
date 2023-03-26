@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar, Button, Flowbite, DarkThemeToggle } from 'flowbite-react'
+import { Navbar, Button, DarkThemeToggle } from 'flowbite-react'
 import { Link } from "react-router-dom";
 import logo from '../../assets/logo.svg'
 
@@ -19,9 +19,7 @@ function HomeNav(){
                 </Navbar.Brand>
                 
                 <div className="flex md:order-2">
-                    <Flowbite>
-                        <DarkThemeToggle />
-                    </Flowbite>
+                    <DarkThemeToggle />
                     <div className="ml-4" />
                     <Link to="/signin">
                         <Button>

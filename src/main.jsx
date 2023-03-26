@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from "react-dom/client";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import './assets/main.css'
+import { Flowbite } from 'flowbite-react'
 
 import Home from './pages/Home/Home';
 import SignIn from './pages/SignIn/SignIn';
@@ -47,6 +48,8 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <Flowbite> 
+      <App />
+    </Flowbite>
   </React.StrictMode>,
 )
