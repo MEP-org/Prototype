@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from "react-dom/client";
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import {createHashRouter, RouterProvider} from "react-router-dom";
 import './styles/main.css'
 import { Flowbite } from 'flowbite-react'
 
@@ -23,7 +23,7 @@ function App() {
   );
 }
 
-const router = createBrowserRouter(
+const router = createHashRouter(
   [
     { path: "/", element: <Home /> , exact: true},
     { path: "/signin", element: <SignIn /> },
@@ -40,10 +40,7 @@ const router = createBrowserRouter(
     { path: "/professor/exercices", element: <ProfExercices /> },
 
     { path: "*", element: <Error /> },
-  ],
-  {
-    basename: "/Prototype/"
-  }
+  ]
 );
 
 ReactDOM.createRoot(document.getElementById('root')).render(
