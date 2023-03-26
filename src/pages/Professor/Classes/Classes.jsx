@@ -40,7 +40,7 @@ function Classes(){
     return (
         <>
             <MyNav active='classes'/>
-            <div className='w-full container py-8 bg-white'>
+            <div className='container py-8 bg-white dark:bg-gray-900'>
                 <Banner />
                 <div className='h-8'></div>
                 <MyClasses classes={classes} loading={loading} />

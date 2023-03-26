@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaArrowRight, FaBook } from "react-icons/fa";
+import { Card } from 'flowbite-react';
 
 function AssignmentCard(props){
 
@@ -7,7 +8,9 @@ function AssignmentCard(props){
 
     return (
         <>
-            <div className="overflow-auto flex flex-col p-6 h-64 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+
+        <Card>
+            <div className="overflow-auto flex flex-col h-64">
                 <div>
                     <p className="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
                         {title}
@@ -48,6 +51,8 @@ function AssignmentCard(props){
                     </button>
                 </div>
             </div>
+        </Card>
+
 
         </>
     )
