@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from "react-dom/client";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import './assets/main.css'
+import './styles/main.css'
 import { Flowbite } from 'flowbite-react'
 
 import Home from './pages/Home/Home';

@@ -25,5 +25,10 @@ export const ExercicesAPI = {
                 }
             }
         ]
-    }
+    },
+    getPublic: async function() {
+        // add a delay to simulate a network request
+        await new Promise((resolve) => setTimeout(resolve, 2000));
+        return []
+    },
 }
