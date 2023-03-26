@@ -8,7 +8,7 @@ import AssignmentCard from './AssignmentCard';
 
 function Assignments(){
 
-    const exerciseMock = [
+    const exercisesMock = [
         {
             "id": 1,
             "title": "Titanic - Machine Learning from Disaster",
@@ -70,14 +70,14 @@ function Assignments(){
 
 
                 {/* HOW TO USE THE CARD */}
-                Testing (delete later)
+                Just to see how they look like (delete later)
                 <div className='grid lg:grid-cols-2 gap-4'>
                     <div>
-                        <AssignmentCard content={exerciseMock[0]} />
+                        <AssignmentCard content={exercisesMock[0]} />
                     </div>
 
                     <div>
-                        <AssignmentCard content={exerciseMock[1]} />
+                        <AssignmentCard content={exercisesMock[1]} />
                     </div>
                 </div>
                 
