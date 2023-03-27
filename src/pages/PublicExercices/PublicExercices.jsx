@@ -1,6 +1,4 @@
-import {useState, useEffect} from 'react'
-import ProfNav from '../Professor/ProfessorNav'
-import StudentNav from '../Student/StudentNav'
+import {useState, useEffect} from 'react';
 import {ExercicesAPI} from "../../api/ExercicesAPI";
 import Banner from './Banner';
 import Filters from './Filters';
@@ -8,8 +6,6 @@ import Results from './Results';
 
 
 export default function PublicExercices(props){
-
-    const MyNav = props.user === 'professor' ? ProfNav : StudentNav
 
     const [filter, setFilter] = useState({
         'title': '',
@@ -37,7 +33,6 @@ export default function PublicExercices(props){
 
     return (
         <>
-            <MyNav active="publicExercices"/>
             <div className='container py-8'>
                 <Banner />
                 <div className='mb-10' />

@@ -1,5 +1,4 @@
 import { useLocation } from "react-router-dom";
-import ProfessorNav from '../ProfessorNav.jsx';
 import ImportClassButton from './ImportClassButton.jsx';
 import AddStudentButton from './AddStudentButton.jsx';
 import StudentsTable from './StudentsTable.jsx';
@@ -13,7 +12,6 @@ export default function ManageClass(){
 
     return (
         <>
-            <ProfessorNav />
             <div data-aos='fade-up' className='w-full container mt-8'>
                     <div className='font-bold text-5xl mb-4'>
                         Classe {myClass.name}

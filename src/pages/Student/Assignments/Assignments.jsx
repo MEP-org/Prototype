@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react'
-import MyNav from '../StudentNav'
+import { useState, useEffect } from 'react';
 import Banner from './Banner';
 import Filters from './Filters';
 import Results from './Results';
@@ -60,7 +59,6 @@ export default function Assignments(){
 
     return (
         <>
-            <MyNav active="assignments"/>
             <div className='container py-8'>
                 <Banner />
                 <div className='mb-10' />

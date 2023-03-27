@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import MyNav from '../StudentNav'
 import { ClassesAPI } from "../../../api/ClassesAPI";
 import Classes from "./Classes";
 import Dashboard from "./Dashboard";
@@ -32,8 +31,6 @@ export default function Home(){
 
     return (
         <>
-            <MyNav active="home"/>
-
             <div className='w-full container mt-8'>
                 <Dashboard stats={stats} loading={loadingStats}/>
                 <Classes classes={classes} loading={loadingClasses} />
