@@ -97,45 +97,22 @@ export default function MyNavbar(props){
         )
     }
 
-    const profBrand = () => {
-        return(
-            <Navbar.Brand as={Link} to="/professor">
-                    <img
-                        src= {logo}
-                        className="mr-3 h-9 md:h-12 sm:h-9"
-                        alt="MepML Logo"
-                        />
-                        <span className="self-center whitespace-nowrap text-3xl font-extrabold logo-font">
-                            MepML
-                        </span>
-                </Navbar.Brand>
-        )
-        
-    }
-
-    const studentBrand = () => {
-        return(
-            <Navbar.Brand as={Link} to="/student">
-                    <img
-                        src= {logo}
-                        className="mr-3 h-9 md:h-12 sm:h-9"
-                        alt="MepML Logo"
-                        />
-                        <span className="self-center whitespace-nowrap text-3xl font-extrabold logo-font">
-                            MepML
-                        </span>
-                </Navbar.Brand>
-        )
-        
-    }
-
     return (
         <>
             <div className='h-screen flex flex-col'>
-               
+
                 <Navbar fluid={true} className='drop-shadow-md'>
                     <div>
-                    {session.type === 'professor' ? profBrand() : studentBrand()}
+                    <Navbar.Brand as={Link} to={`/${session.type}/`}>
+                        <img
+                            src= {logo}
+                            className="mr-3 h-9 md:h-12 sm:h-9"
+                            alt="MepML Logo"
+                            />
+                            <span className="self-center whitespace-nowrap text-3xl font-extrabold logo-font">
+                                MepML
+                            </span>
+                    </Navbar.Brand>
                     </div>
                     <div className="flex md:order-2">
                         <div className='pl-10'/>
@@ -170,11 +147,12 @@ export default function MyNavbar(props){
                         {session.type === 'professor' ? profLinks() : studentLinks()}
                     </Navbar.Collapse>
                 </Navbar>
+                
                 <div className='flex-1 overflow-y-auto'>
                     <Outlet />
                 </div>
 
-                {/* <Particles id="tsparticles" options={options} init={particlesInit} /> */}
+                <Particles id="tsparticles" options={options} init={particlesInit} />
                 {console.log(Particles, options, particlesInit)}
             </div>
         </>

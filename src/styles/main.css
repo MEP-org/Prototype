@@ -34,8 +34,8 @@
 }
 
 .center{
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
 }
 
 .background-home {
@@ -82,5 +82,10 @@
     align-items: center;
     color: #ffffff;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.bruh {
+    border-top-style: none;
+    border-bottom-style: none;
 }
 
