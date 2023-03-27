@@ -11,5 +11,11 @@ export const ClassesAPI = {
         // add a delay to simulate a network request
         await new Promise((resolve) => setTimeout(resolve, 2000));
         return student_classes.filter((item) => item.Nmec === studentId);
-    }
+    },
+
+    getByClassName: async function(className) {
+        // add a delay to simulate a network request
+        await new Promise((resolve) => setTimeout(resolve, 2000));
+        return classes.filter((item) => item.name === className);
+    },
 }
