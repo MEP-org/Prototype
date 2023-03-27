@@ -13,6 +13,8 @@ import ProfManageClass from '../pages/Professor/ManageClass/ManageClass.jsx'
 import ProfExercices from '../pages/Professor/Exercices/Exercices.jsx'
 import Error from '../pages/Error/Error.jsx'
 
+import Test from '../pages/Test/Test.jsx'
+
 export default function Router(){
 
     const router = createHashRouter(
@@ -39,6 +41,7 @@ export default function Router(){
                     { path: "exercices", element: <ProfExercices /> },
                 ]
             },
+            { path: "/test", element: <Test /> },
             { path: "*", element: <Error /> },
         ]
     )
