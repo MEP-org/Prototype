@@ -97,11 +97,9 @@ export default function MyNavbar(props){
         )
     }
 
-    return (
-        <>
-            <Navbar fluid={true} className='drop-shadow-md'>
-                <div>
-                <Navbar.Brand as={Link} to="/professor">
+    const profBrand = () => {
+        return(
+            <Navbar.Brand as={Link} to="/professor">
                     <img
                         src= {logo}
                         className="mr-3 h-9 md:h-12 sm:h-9"
@@ -111,6 +109,31 @@ export default function MyNavbar(props){
                             MepML
                         </span>
                 </Navbar.Brand>
+        )
+        
+    }
+
+    const studentBrand = () => {
+        return(
+            <Navbar.Brand as={Link} to="/student">
+                    <img
+                        src= {logo}
+                        className="mr-3 h-9 md:h-12 sm:h-9"
+                        alt="MepML Logo"
+                        />
+                        <span className="self-center whitespace-nowrap text-3xl font-extrabold logo-font">
+                            MepML
+                        </span>
+                </Navbar.Brand>
+        )
+        
+    }
+
+    return (
+        <>
+            <Navbar fluid={true} className='drop-shadow-md'>
+                <div>
+                {session.type === 'professor' ? profBrand() : studentBrand()}
                 </div>
                 <div className="flex md:order-2">
                     <div className='pl-10'/>
