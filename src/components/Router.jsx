@@ -1,4 +1,4 @@
-import {createHashRouter, RouterProvider} from "react-router-dom";
+import {createHashRouter, RouterProvider, Navigate} from "react-router-dom";
 
 import MyNavbar from './MyNavbar'
 
@@ -22,7 +22,7 @@ export default function Router(){
             {
                 path: "/student", element: <MyNavbar type='student'/>,
                 children: [
-                    { index: true, element: <StudentHome />},
+                    { index: true, element: <Navigate to="/student/home" /> },
                     { path: "home", element: <StudentHome /> },
                     { path: "publicExercices", element: <PublicExercices user='student'/> },
                     { path: "assignments", element: <StudentAssignments /> },
@@ -32,7 +32,7 @@ export default function Router(){
             {
                 path: "/professor", element: <MyNavbar type='professor'/>,
                 children: [
-                    { index: true, element: <ProfHome />},
+                    { index: true, element: <Navigate to="/professor/classes" /> },
                     { path: "classes", element: <ProfHome /> },
                     { path: "manageClass", element: <ProfManageClass /> },
                     { path: "publicExercices", element: <PublicExercices user='professor'/> },

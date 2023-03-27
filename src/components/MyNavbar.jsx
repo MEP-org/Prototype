@@ -168,11 +168,13 @@ export default function MyNavbar(props){
                     {session.type === 'professor' ? profLinks() : studentLinks()}
                 </Navbar.Collapse>
             </Navbar>
+                <div className='flex-1 overflow-y-auto'>
+                    <Outlet />
+                </div>
 
-            <Outlet />     
-
-            {/* <Particles id="tsparticles" options={options} init={particlesInit} /> */}
-            {console.log(Particles, options, particlesInit)}
+                {/* <Particles id="tsparticles" options={options} init={particlesInit} /> */}
+                {console.log(Particles, options, particlesInit)}
+            </div>
         </>
     )
 }
