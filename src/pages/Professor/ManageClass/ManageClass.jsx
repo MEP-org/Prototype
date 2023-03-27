@@ -1,4 +1,3 @@
-import React from 'react'
 import { useLocation } from "react-router-dom";
 import ProfessorNav from '../ProfessorNav.jsx';
 import ImportClassButton from './ImportClassButton.jsx';
@@ -6,7 +5,7 @@ import AddStudentButton from './AddStudentButton.jsx';
 import StudentsTable from './StudentsTable.jsx';
 import MembersQuantity from './MembersQuantity.jsx';
 
-function ManageClass(){
+export default function ManageClass(){
 
     const location = useLocation();
     const {class : myClass} = location.state || {class : null};
@@ -33,5 +32,3 @@ function ManageClass(){
         </>
     )
 }
-
-export default ManageClass

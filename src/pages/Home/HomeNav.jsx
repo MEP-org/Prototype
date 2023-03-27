@@ -1,9 +1,8 @@
-import React from 'react'
 import { Navbar, Button, DarkThemeToggle } from 'flowbite-react'
 import { Link } from "react-router-dom";
 import logo from '../../assets/logo.svg'
 
-function HomeNav(){
+export default function HomeNav(){
     return (
         <>
             <Navbar fluid={true} className='drop-shadow-md sticky top-0 z-10'>
@@ -31,5 +30,3 @@ function HomeNav(){
         </>
     )
 }
-
-export default HomeNav

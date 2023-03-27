@@ -1,8 +1,7 @@
-import React from 'react';
 import { Button } from 'flowbite-react'
 import { useNavigate } from "react-router-dom";
 
-function SignIn(){
+export default function SignIn(){
 
     const navigate = useNavigate();
 
@@ -39,5 +38,3 @@ function SignIn(){
         </>
     )
 }
-
-export default SignIn

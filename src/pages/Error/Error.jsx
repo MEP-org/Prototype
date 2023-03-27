@@ -1,7 +1,6 @@
-import React from 'react'
 import { useLocation } from 'react-router-dom'
 
-function Error(){
+export default function Error(){
 
     const message = useLocation().pathname
 
@@ -14,5 +13,3 @@ function Error(){
         </>
     )
 }
-
-export default Error

@@ -1,9 +1,8 @@
-import React from 'react'
 import {FaUserFriends} from 'react-icons/fa'
 import {Spinner} from 'flowbite-react';
 import ClassCard from './ClassCard';
 
-function MyClasses(props){
+export default function MyClasses(props){
 
     const {classes, loading} = props;
 
@@ -39,5 +38,3 @@ function MyClasses(props){
         </>
     )
 }
-
-export default MyClasses

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import MyNav from '../StudentNav'
 import { ClassesAPI } from "../../../api/ClassesAPI";
 import Classes from "./Classes";
@@ -8,7 +8,7 @@ import Dashboard from "./Dashboard";
 import {student_stats} from '../../../api/data.json';
 
 
-function Home(){
+export default function Home(){
 
     const [loadingStats, setLoadingStats] = useState(false);
     const [loadingClasses, setLoadingClasses] = useState(false);
@@ -41,5 +41,3 @@ function Home(){
         </>
     )
 }
-
-export default Home

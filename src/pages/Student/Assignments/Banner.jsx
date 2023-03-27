@@ -1,6 +1,5 @@
-import React from 'react'
 
-function Banner(){
+export default function Banner(){
 
     return (
         <>
@@ -18,5 +17,3 @@ function Banner(){
         </>
     )
 }
-
-export default Banner

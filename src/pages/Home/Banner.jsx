@@ -1,9 +1,8 @@
-import React from 'react'
 import { Button } from 'flowbite-react'
 import { Link } from 'react-router-dom'
 
 
-function Banner(){
+export default function Banner(){
 
 
     return (
@@ -18,6 +17,4 @@ function Banner(){
         </div>
     )
 }
-
-export default Banner
   

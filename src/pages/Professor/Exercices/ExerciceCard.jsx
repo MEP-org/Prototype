@@ -1,8 +1,7 @@
-import React from 'react';
 import { FaArrowRight, FaBook, FaGlobeAmericas } from "react-icons/fa";
 import { Card } from 'flowbite-react';
 
-function ExerciceCard(props) {
+export default function ExerciceCard(props) {
 
     const {id, title, description, visible, maxAttempts, totalAnswers, maxAnswers, published, deadline, studentClass} = props.content;
     
@@ -85,5 +84,3 @@ function ExerciceCard(props) {
         </>
     )
 }
-
-export default ExerciceCard;

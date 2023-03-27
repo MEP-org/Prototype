@@ -1,8 +1,7 @@
-import React from 'react'
 import { Label, TextInput, Select } from 'flowbite-react';
 import { FaSearch } from 'react-icons/fa'
 
-function Filters(props){
+export default function Filters(props){
 
     const {filter, setFilter, exercices} = props;
     const classes = exercices.map((exercice) => {
@@ -70,5 +69,3 @@ function Filters(props){
         </>
     )
 }
-
-export default Filters

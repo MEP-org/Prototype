@@ -9,22 +9,6 @@ npm run build
 <http://localhost:5173/Prototype/>
 
 
-## Components
-```jsx
-import React from 'react'
-
-function Name(){
-
-
-    return (
-        <>
-        </>
-    )
-}
-
-export default Name
-```
-
 ## links:
 - https://tailwindcss.com/docs/installation
 - https://flowbite.com/docs/getting-started/react/

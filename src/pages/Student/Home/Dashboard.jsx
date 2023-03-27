@@ -1,10 +1,8 @@
-import React from 'react'
 import {Spinner, Card} from 'flowbite-react';
 import {FaCheckCircle, FaFileAlt, FaHourglassHalf, FaGraduationCap} from 'react-icons/fa'
 
 
-
-function Dashboard(props){
+export default function Dashboard(props){
 
     const {stats, loading} = props;
 
@@ -93,5 +91,3 @@ function Dashboard(props){
         </>
     )
 }
-
-export default Dashboard

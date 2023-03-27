@@ -1,9 +1,8 @@
-import React from 'react'
 import { Table } from 'flowbite-react'
 import { FaUserEdit, FaTrashAlt } from 'react-icons/fa'
 
 
-function StudentsTable(props){
+export default function StudentsTable(props){
 
     console.log(props.myClass);
 
@@ -76,7 +75,3 @@ function StudentsTable(props){
 
 
 }
-
-
-
-export default StudentsTable

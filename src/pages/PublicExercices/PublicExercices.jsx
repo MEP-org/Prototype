@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import {useState, useEffect} from 'react'
 import ProfNav from '../Professor/ProfessorNav'
 import StudentNav from '../Student/StudentNav'
 import {ExercicesAPI} from "../../api/ExercicesAPI";
@@ -7,7 +7,7 @@ import Filters from './Filters';
 import Results from './Results';
 
 
-function PublicExercices(props){
+export default function PublicExercices(props){
 
     const MyNav = props.user === 'professor' ? ProfNav : StudentNav
 
@@ -48,5 +48,3 @@ function PublicExercices(props){
         </>
     )
 }
-
-export default PublicExercices

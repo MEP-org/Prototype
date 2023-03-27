@@ -1,6 +1,5 @@
-import React from 'react'
 
-function ExerciceCard(){
+export default function ExerciceCard(){
 
 
     return (
@@ -8,5 +7,3 @@ function ExerciceCard(){
         </>
     )
 }
-
-export default ExerciceCard

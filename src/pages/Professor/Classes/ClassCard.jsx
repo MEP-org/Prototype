@@ -1,9 +1,8 @@
-import React from "react"
 import { useNavigate } from "react-router-dom";
 import { FaUser, FaUserFriends } from "react-icons/fa";
 
 
-function ClassCard(props){
+export default function ClassCard(props){
 
     const item = props.item;
     const navigate = useNavigate();
@@ -44,5 +43,3 @@ function ClassCard(props){
         </>
     )
 }
-
-export default ClassCard

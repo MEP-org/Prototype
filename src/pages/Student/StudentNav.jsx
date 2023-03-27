@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import logo from '../../assets/logo.svg'
 import { Navbar, Dropdown, Avatar, DarkThemeToggle } from 'flowbite-react'
 import {FaSignOutAlt} from 'react-icons/fa'
 
 
-function StudentNav(props){
+export default function StudentNav(props){
 
     const { active } = props
     const navigate = useNavigate();
@@ -88,5 +88,3 @@ function StudentNav(props){
         </>
     )
 }
-
-export default StudentNav

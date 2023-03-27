@@ -1,10 +1,10 @@
-import React, { useCallback } from 'react'
+import { useCallback } from 'react'
 import Particles from 'react-tsparticles'
 import { loadFull } from 'tsparticles'
 import { particles } from './particles.json'
 
 
-function ParticlesBg(){
+export default function ParticlesBg(){
 
     const particlesInit = useCallback(async engine => {
         console.log(engine);
@@ -26,5 +26,3 @@ function ParticlesBg(){
         </div>
     );
 }
-
-export default ParticlesBg

@@ -1,9 +1,8 @@
-import React from 'react'
 import { Spinner } from 'flowbite-react';
 import { FaFileAlt } from 'react-icons/fa';
 import ExerciceCard from './ExerciceCard';
 
-function Results(props){
+export default function Results(props){
 
     const {exercices, loading} = props;
 
@@ -55,5 +54,3 @@ function Results(props){
         </>
     )
 }
-
-export default Results

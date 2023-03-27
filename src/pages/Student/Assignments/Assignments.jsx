@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import MyNav from '../StudentNav'
 import Banner from './Banner';
 import Filters from './Filters';
@@ -6,7 +6,7 @@ import Results from './Results';
 import { ExercicesAPI } from "../../../api/ExercicesAPI";
 import AssignmentCard from './AssignmentCard';
 
-function Assignments(){
+export default function Assignments(){
 
     const exercisesMock = [
         {
@@ -80,5 +80,3 @@ function Assignments(){
         </>
     )
 }
-
-export default Assignments

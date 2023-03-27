@@ -1,7 +1,6 @@
-import React from 'react'
 import { FaUserFriends } from 'react-icons/fa'
 
-function MembersQuantity(props){
+export default function MembersQuantity(props){
     
         return (
             <>
@@ -15,6 +14,3 @@ function MembersQuantity(props){
 
     
 }
-
-
-export default MembersQuantity

@@ -1,7 +1,6 @@
-import React from 'react'
 import {FaPlusCircle} from 'react-icons/fa'
 
-function Banner(){
+export default function Banner(){
 
     return (
         <>
@@ -35,5 +34,3 @@ function Banner(){
         </>
     )
 }
-
-export default Banner

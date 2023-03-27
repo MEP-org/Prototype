@@ -1,8 +1,7 @@
-import React from 'react'
 import {FaPlusCircle} from 'react-icons/fa'
 
 
-function ImportClassButton(){
+export default function ImportClassButton(){
 
     return (
         <>
@@ -16,7 +15,3 @@ function ImportClassButton(){
         </>
     )
 }
-
-
-
-export default ImportClassButton

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from "react"
+import { useEffect, useState, useCallback } from "react"
 import MyNav from '../ProfessorNav'
 import Banner from './Banner';
 import MyClasses from './MyClasses';
@@ -9,7 +9,7 @@ import { loadFull } from "tsparticles";
 import options from './options.json'
 
 
-function Classes(){
+export default function Classes(){
 
     const particlesInit = useCallback(async engine => {
         // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
@@ -49,5 +49,3 @@ function Classes(){
         </>
     )
 }
-
-export default Classes

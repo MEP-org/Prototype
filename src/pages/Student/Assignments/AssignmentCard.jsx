@@ -1,8 +1,7 @@
-import React from 'react'
 import { FaArrowRight, FaBook } from "react-icons/fa";
 import { Card } from 'flowbite-react';
 
-function AssignmentCard(props){
+export default function AssignmentCard(props){
 
     const {id, title, description, published, deadline, studentClass} = props.content;
 
@@ -57,5 +56,3 @@ function AssignmentCard(props){
         </>
     )
 }
-
-export default AssignmentCard

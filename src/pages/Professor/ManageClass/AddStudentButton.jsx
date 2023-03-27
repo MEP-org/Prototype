@@ -1,7 +1,6 @@
-import React from 'react'
 import {FaPlusCircle} from 'react-icons/fa'
 
-function AddStudentButton(){
+export default function AddStudentButton(){
 
     return (
         <>
@@ -15,5 +14,3 @@ function AddStudentButton(){
         </>
     )
 }
-
-export default AddStudentButton
