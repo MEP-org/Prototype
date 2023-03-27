@@ -8,6 +8,7 @@ export default function ClassCard(props){
     const navigate = useNavigate();
 
     const handleClassClick = (item) => {
+        console.log("TODO: Redirect to class page");
         navigate(`/student/ViewClass/${item.id}`);
     }
 
