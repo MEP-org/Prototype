@@ -1,9 +1,11 @@
 import { FaArrowRight, FaBook } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 import { Card } from 'flowbite-react';
 
 export default function AssignmentCard(props){
 
-    const {id, title, description, published, deadline, studentClass} = props.content;
+    const navigate = useNavigate();
+    const {title, description, published, deadline, studentClass} = props.content;
 
     return (
         <>
@@ -45,7 +47,7 @@ export default function AssignmentCard(props){
                         </div>
                     </div>
 
-                    <button className="my-btn h-11 w-11">
+                    <button className="my-btn h-11 w-11" onClick={() => {navigate("/student/assignments/1")}}>
                         <FaArrowRight />
                     </button>
                 </div>
