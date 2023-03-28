@@ -4,9 +4,9 @@ export default function MembersQuantity(props){
     
         return (
             <>
-                <div className="w-full flex">
+                <div className="font-semibold text-2xl flex items-center">
                     <FaUserFriends className='inline-block mr-2' size={22} />
-                    <span className="inline-block">{props.quantity} members</span>
+                    {props.quantity} members
                 </div>
             </>
         )
