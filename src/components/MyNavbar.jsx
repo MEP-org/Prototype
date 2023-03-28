@@ -101,7 +101,7 @@ export default function MyNavbar(props){
         <>
             <div className='h-screen flex flex-col'>
 
-                <Navbar fluid={true} className='drop-shadow-md'>
+                <Navbar fluid={true} className='drop-shadow-md z-50'>
                     <div>
                     <Navbar.Brand as={Link} to={`/${session.type}/`}>
                         <img
