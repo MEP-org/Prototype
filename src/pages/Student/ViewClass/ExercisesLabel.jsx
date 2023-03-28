@@ -5,9 +5,9 @@ export default function ExercisesLabel(){
     return (
         <>
                 
-            <div className="w-full flex">
+            <div className="font-semibold text-2xl flex items-center">
                 <FaFileAlt className='inline-block mr-2' size={22} />
-                <span className="inline-block">Exercises</span>
+                Assignments
             </div>
             
         </>

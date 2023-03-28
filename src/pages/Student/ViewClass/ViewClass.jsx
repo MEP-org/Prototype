@@ -85,11 +85,11 @@ export default function ViewClass(){
 
     const renderLoading = () => {
         return (
-            <Card data-aos='fade-up' className='mt-4 mb-8 delay-200'>
-                <div className='w-fit mx-auto'>
+            <>
+                <div data-aos='fade-up' className='w-fit mt-20 mx-auto delay-200'>
                     <Spinner size='xl' />
                 </div> 
-            </Card>
+            </>
         )
     }
 
@@ -124,8 +124,8 @@ export default function ViewClass(){
         return (
             <div data-aos='fade-up' className='w-full container mt-8'>
                 {/* Title */}
-                <div className='font-bold text-5xl mb-4'>
-                    Classe {myClass.name}
+                <div className='font-bold text-5xl mb-3'>
+                    {myClass.name}
                 </div>
 
                 {/* Members Label */}
