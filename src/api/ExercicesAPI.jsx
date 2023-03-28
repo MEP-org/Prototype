@@ -1,3 +1,4 @@
+import { assignment } from './data.json';
 
 export const ExercicesAPI = {
     getByProf: async function(profId) {
@@ -31,4 +32,10 @@ export const ExercicesAPI = {
         await new Promise((resolve) => setTimeout(resolve, 2000));
         return []
     },
+
+    getAssignmentById: async function(assignmentId) {
+        // add a delay to simulate a network request
+        await new Promise((resolve) => setTimeout(resolve, 2000));
+        return assignment;
+    }
 }
