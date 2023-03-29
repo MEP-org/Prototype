@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { Flowbite } from 'flowbite-react';
 
 import './styles/main.css'
-import Router from './components/Router'
+import Router from './utils/Router.jsx'
 
 function App() {
 

@@ -1,6 +1,6 @@
 import {createHashRouter, RouterProvider, Navigate} from "react-router-dom";
 
-import MyNavbar from './MyNavbar'
+import MyNavbar from '../components/MyNavbar'
 
 import Home from '../pages/Home/Home';
 import SignIn from '../pages/SignIn/SignIn';
