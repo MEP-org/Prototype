@@ -8,9 +8,8 @@ import {mdMaxSize} from '../utils/settings.json';
 
 export default function MarkdownEditor(props) {
 
-    const {type} = props;
-    const [mode,,] = useThemeMode(); 
-    const [value, setValue] = useState(`# ${type}`);
+    const {type, value, setValue} = props;
+    const [mode,,] = useThemeMode();
     const [showModal, setShowModal] = useState(false);
 
     const uploadFileClick = () => {
@@ -33,7 +32,6 @@ export default function MarkdownEditor(props) {
     };
 
     const downloadClick = () => {
-        console.log(value)
         if (value.length === 0) return;
         const element = document.createElement("a");
         const file = new Blob([value], {type: 'text/plain'});
@@ -96,7 +94,7 @@ export default function MarkdownEditor(props) {
                 size="md"
                 popup={true}
                 onClose={ () => setShowModal(false)}
-                className={value.length==0 ? 'hidden' : ''}
+                className={value.length===0 ? 'hidden' : ''}
             >
                 <Modal.Header />
                 <Modal.Body>

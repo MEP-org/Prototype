@@ -37,5 +37,14 @@ export const ExercicesAPI = {
         // add a delay to simulate a network request
         await new Promise((resolve) => setTimeout(resolve, 2000));
         return assignment;
-    }
+    },
+
+    getProfExerciceById: async function(profId, exerciceId) {
+        // add a delay to simulate a network request
+        await new Promise((resolve) => setTimeout(resolve, 2000));
+        return {
+            "exercice": undefined,
+            "classes": []
+        }      
+    },  
 }
