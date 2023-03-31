@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import MDEditor from '@uiw/react-md-editor';
 import rehypeSanitize from "rehype-sanitize";
 import { Button, useThemeMode } from 'flowbite-react';
@@ -6,12 +5,10 @@ import {BsDownload} from 'react-icons/bs';
 
 export default function MarkdownViewer(props) {
 
-    const {text, type} = props;
+    const {type, value} = props;
     const [mode,,] = useThemeMode(); 
-    const [value, setValue] = useState(text);
 
     const downloadClick = () => {
-        console.log(value)
         if (value.length === 0) return;
         const element = document.createElement("a");
         const file = new Blob([value], {type: 'text/plain'});
@@ -33,9 +30,8 @@ export default function MarkdownViewer(props) {
                 <div className='scale-125 h-4/5 w-4/5' data-color-mode={mode}>
                     <MDEditor
                         value={value}
-                        onChange={setValue}
-                        highlightEnable={true}
-                        autoFocus={true}
+                        highlightEnable={false}
+                        autoFocus={false}
                         preview={'preview'}        // edit, live, preview
                         hideToolbar={true}
                         visibleDragbar={false}

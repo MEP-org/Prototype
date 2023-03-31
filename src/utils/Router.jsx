@@ -12,6 +12,7 @@ import PublicExercices from '../pages/PublicExercices/PublicExercices';
 import ProfHome from '../pages/Professor/Classes/Classes.jsx'
 import ProfManageClass from '../pages/Professor/ManageClass/ManageClass.jsx'
 import ProfExercices from '../pages/Professor/Exercices/Exercices.jsx'
+import ProfManageExercice from '../pages/Professor/ManageExercice/ManageExercice.jsx'
 import Error from '../pages/Error/Error.jsx'
 
 import Test from '../pages/Test/Test.jsx'
@@ -41,6 +42,8 @@ export default function Router(){
                     { path: "manageClass", element: <ProfManageClass /> },
                     { path: "publicExercices", element: <PublicExercices user='professor'/> },
                     { path: "exercices", element: <ProfExercices /> },
+                    { path: "exercices/add", element: <ProfManageExercice />},
+                    { path: "exercices/:id", element: <ProfManageExercice />}
                 ]
             },
             { path: "/test", element: <Test /> },
