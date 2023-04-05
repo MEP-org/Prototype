@@ -1,10 +1,11 @@
 import {FaPlusCircle} from 'react-icons/fa'
+import { Button } from 'flowbite-react'
 
 export default function Banner(){
 
     return (
         <>
-            <div data-aos='fade-up' className='w-full relative'>
+            <div className='w-full relative fadeInUp'>
                 <div className='font-bold text-5xl mb-4'>
                     Classes
                 </div>
@@ -15,12 +16,12 @@ export default function Banner(){
                     blanditiis praesentium voluptatum deleniti atque corrupti quos
                 </div>
 
-                <div className='bottom-0 right-0 absolute z-10 card flex center px-3 py-2'>
+                <Button className='bottom-0 right-0 absolute dark:bg-gray-800' color='light'>
                     Create a new class
-                    <div className='card p-2 ml-2'>
+                    <div className='ml-2'>
                         <FaPlusCircle />
                     </div>
-                </div>
+                </Button>
             </div>
         </>
     )

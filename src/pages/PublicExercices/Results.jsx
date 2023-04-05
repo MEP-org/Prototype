@@ -8,7 +8,7 @@ export default function Results(props){
 
     const renderLoading = () => {
         return (
-            <div data-aos='fade-up' className='w-fit mx-auto delay-200'>
+            <div className='w-fit mx-auto'>
                 <Spinner size='xl' />
             </div> 
         )
@@ -17,7 +17,7 @@ export default function Results(props){
     const noResults = () => {
         return (
             <>
-                <div data-aos='fade-up' className='delay-200 font-bold text-xl text-center'>
+                <div className=' font-bold text-xl text-center'>
                     No results found
                 </div>
             </>
@@ -30,7 +30,7 @@ export default function Results(props){
         }
         return (
             <>
-                <div data-aos='fade-up' className='delay-200'>
+                <div>
                     {exercices.map((exercice) => {
                         return (
                             <ExerciceCard exercice={exercice} key={exercice.id} />
@@ -44,7 +44,7 @@ export default function Results(props){
 
     return (
         <>
-            <div data-aos='fade-up' className='delay-100' >
+            <div >
                 <div className='font-semibold text-3xl mb-10 flex items-center'>
                     <FaFileAlt className='mr-2' size={25} />
                     Public Exercices

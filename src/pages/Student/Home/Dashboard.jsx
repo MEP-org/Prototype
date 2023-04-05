@@ -8,7 +8,7 @@ export default function Dashboard(props){
 
     const renderLoading = () => {
         return (
-            <Card data-aos='fade-up' className='mt-4 mb-8 delay-200'>
+            <Card className='mt-4 mb-8'>
                 <div className='w-fit mx-auto'>
                     <Spinner size='xl' />
                 </div> 
@@ -84,7 +84,7 @@ export default function Dashboard(props){
 
     return (
         <>
-            <p data-aos='fade-up' className="font-bold text-4xl delay-100">Welcome, Jack Connor!</p>
+            <p className="font-bold text-4xl">Welcome, Jack Connor!</p>
 
             {loading ? renderLoading() : renderStats()}
 

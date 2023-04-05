@@ -39,7 +39,8 @@ export default function Router(){
                 children: [
                     { index: true, element: <Navigate to="/professor/classes" /> },
                     { path: "classes", element: <ProfHome /> },
-                    { path: "manageClass", element: <ProfManageClass /> },
+                    { path: "classes/add", element: <ProfManageClass /> },
+                    { path: "classes/:id", element: <ProfManageClass /> },
                     { path: "publicExercices", element: <PublicExercices user='professor'/> },
                     { path: "exercices", element: <ProfExercices /> },
                     { path: "exercices/add", element: <ProfManageExercice />},

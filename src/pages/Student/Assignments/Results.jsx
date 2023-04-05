@@ -8,7 +8,7 @@ export default function Results(props){
 
     const renderLoading = () => {
         return (
-            <div data-aos='fade-up' className='w-fit mx-auto delay-200'>
+            <div className='w-fit mx-auto '>
                 <Spinner size='xl' />
             </div> 
         )
@@ -17,7 +17,7 @@ export default function Results(props){
     const noResults = () => {
         return (
             <>
-                <div data-aos='fade-up' className='delay-200 font-bold text-xl text-center'>
+                <div className=' font-bold text-xl text-center'>
                     No results found
                 </div>
             </>
@@ -38,7 +38,7 @@ export default function Results(props){
         // TODO: Implement sort
         return (
             <>
-                <div data-aos='fade-up' className='delay-200'>
+                <div>
                     <div className='grid lg:grid-cols-2 gap-4'>
                         {filteredExercices.map((exercice) => {
                             return (
@@ -53,7 +53,7 @@ export default function Results(props){
 
     return (
         <>
-            <div data-aos='fade-up' className='delay-100' >
+            <div >
                 <div className='font-semibold text-3xl mb-10 flex items-center'>
                     <FaFileAlt className='inline-block mr-2' size={25} />
                     Assignments

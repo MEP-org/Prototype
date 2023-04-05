@@ -9,7 +9,7 @@ export default function MyClasses(props){
     const renderLoading = () => {
         return (
             <>
-                <div data-aos='fade-up' className='w-fit mx-auto delay-200'>
+                <div className='w-fit mx-auto'>
                     <Spinner size='xl' />
                 </div> 
             </>
@@ -28,7 +28,7 @@ export default function MyClasses(props){
 
     return (
         <>
-            <div data-aos='fade-up' className='delay-100' >
+            <div>
                 <div className='font-semibold text-3xl mb-4 flex items-center'>
                     <FaUserFriends className='inline-block mr-2' size={23} />
                     My Classes

@@ -3,7 +3,7 @@ export default function Banner(){
 
     return (
         <>
-            <div data-aos='fade-up'>
+            <div>
                 <div className='font-bold text-5xl mb-4'>
                     Assignments
                 </div>

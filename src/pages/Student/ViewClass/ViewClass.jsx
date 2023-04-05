@@ -86,7 +86,7 @@ export default function ViewClass(){
     const renderLoading = () => {
         return (
             <>
-                <div data-aos='fade-up' className='w-fit mt-20 mx-auto delay-200'>
+                <div className='w-fit mt-20 mx-auto '>
                     <Spinner size='xl' />
                 </div> 
             </>
@@ -100,7 +100,7 @@ export default function ViewClass(){
 
         if (exercisesMock.length === 0) {
             return (
-                <div data-aos='fade-up' className='delay-200 font-bold text-xl text-center'>
+                <div className=' font-bold text-xl text-center'>
                     No results found
                 </div>
             )
@@ -122,7 +122,7 @@ export default function ViewClass(){
         }
     
         return (
-            <div data-aos='fade-up' className='w-full container mt-8'>
+            <div className='w-full container mt-8'>
                 {/* Title */}
                 <div className='font-bold text-5xl mb-3'>
                     {myClass.name}

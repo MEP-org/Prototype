@@ -12,7 +12,7 @@ export default function ManageClass(){
 
     return (
         <>
-            <div data-aos='fade-up' className='w-full container mt-8'>
+            <div className='w-full container mt-8'>
                     <div className='font-bold text-5xl mb-4'>
                         Classe {myClass.name}
                     </div>
@@ -26,7 +26,6 @@ export default function ManageClass(){
                     <div className='h-4'></div>
                     <StudentsTable myClass={myClass.students} />
             </div>
-            {/* {JSON.stringify(myClass, null, 2)} */}
         </>
     )
 }

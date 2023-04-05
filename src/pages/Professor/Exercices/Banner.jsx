@@ -4,7 +4,7 @@ export default function Banner(){
 
     return (
         <>
-            <div data-aos='fade-up' className='w-full relative'>
+            <div className='w-full relative'>
                 <div className='font-bold text-5xl mb-4'>
                     Exercices
                 </div>

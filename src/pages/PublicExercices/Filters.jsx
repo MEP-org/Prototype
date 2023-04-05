@@ -20,7 +20,7 @@ export default function FIlters(props){
 
     return (
         <>
-            <div data-aos="fade-up" className='grid grid-cols-7 gap-10 delay-100'>
+            <div className='grid grid-cols-7 gap-10'>
 
                 <div className='col-span-2 '>
                     <Label htmlFor="search" value="Tittle" />

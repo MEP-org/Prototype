@@ -16,7 +16,7 @@ export default function Evaluation(props){
 
     const value = exercice.evaluationRules || "# Evaluation rules"
     const setValue = (value) => {
-        handleChange({target: {name: "description", value: value}})
+        handleChange({target: {name: "evaluationRules", value: value}})
     }
 
 	return (
