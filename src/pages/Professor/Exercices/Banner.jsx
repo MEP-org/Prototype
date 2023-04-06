@@ -1,32 +1,39 @@
-import {FaPlusCircle} from 'react-icons/fa'
+import {FaPlusCircle, FaEye} from 'react-icons/fa'
+import { Button } from 'flowbite-react'
+import {Link} from 'react-router-dom'
 
 export default function Banner(){
 
     return (
         <>
-            <div className='w-full relative'>
-                <div className='font-bold text-5xl mb-4'>
-                    Exercices
-                </div>
-                <div className='text-lg mb-4 lg:w-1/2 text-justify'>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    <p/>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                    blanditiis praesentium voluptatum deleniti atque corrupti quos
+            <div className='grid grid-cols-3'>
+                <div className='col-span-2'>
+                    <div className='font-bold text-5xl mb-4'>
+                        Exercices
+                    </div>
+                    <div className='text-lg mb-4 text-justify'>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        <p/>
+                        At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                        blanditiis praesentium voluptatum deleniti atque corrupti quos
+                    </div>
                 </div>
 
-                <div className='bottom-0 right-0 absolute '>
-                    <div className='flex center card px-3 py-2'>
-                        Create a new Exercice
-                        <div className='card p-2 ml-2'>
-                            <FaPlusCircle />
-                        </div>
-                    </div>
-                    <div className='flex center card mt-2 px-3 py-2'>
-                        Create a new Metric
-                        <div className='card p-2 ml-5'>
-                            <FaPlusCircle />
-                        </div>
+                <div className='flex justify-end items-end'>
+                    <div>
+                        <Link to='/professor/metrics'>
+                            <Button className='dark:bg-gray-800' color='light'>
+                                <div className='w-40 text-center'>Available metrics</div>
+                                <FaEye />
+                            </Button>
+                        </Link>
+                        <div className='mt-4' />
+                        <Link to='/professor/exercices/add'>
+                            <Button className='dark:bg-gray-800' color='light'>
+                                <div className='w-40 text-center'>Create a new exercice</div>
+                                <FaPlusCircle />
+                            </Button>
+                        </Link>
                     </div>
                     
                 </div>
