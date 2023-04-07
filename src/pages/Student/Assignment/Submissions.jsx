@@ -1,38 +1,41 @@
-import { useState, onClick, onClose } from "react";
+import { useState } from "react";
+import { Spinner, Button, Modal, Alert } from "flowbite-react";
+import PreviousSubmissions from "./PreviousSubmissions";
 import { BsBarChartFill, BsCodeSlash } from "react-icons/bs";
 import { AiFillCloseCircle } from "react-icons/ai";
-import {BsCloudDownload} from "react-icons/bs";
-import {Spinner, Button, Modal} from "flowbite-react";
 
 export default function Submissions(props){
 
     const { submissions, loading } = props;
-    const [results, setResults] = useState(undefined);
-    const [model, setModel] = useState(undefined);
+    const [results, setResults] = useState();
+    const [model, setModel] = useState();
+    const [showModal, setShowModal] = useState(false);
+    const [showAlert, setShowAlert] = useState(false);
 
 
     const handleFileUpload = (event, type) => {
         const file = event.target.files[0];
-
-        if (type === "results") {
-            setResults(file);
-        }
-        if (type === "model") {
-            setModel(file);
-        }
+        type === "results" ? setResults(file) : setModel(file);
     }
 
 
     const handleRemoveFile = (type) => {
-        type === "results" ? setResults(undefined) : setModel(undefined);
+        type === "results" ? setResults() : setModel();
     }
 
+    
+    const handleSubmit = () => {
+        
+        if (!results || !model) {
+            setShowAlert(true);
+            return;
+        }
+        
+        //TODO: create a formdata and send it to backend via axios
 
-    const downloadFile = (event, downloadLink) => {
-        event.preventDefault();
-        window.location.href = downloadLink;
+        setShowModal(false);
     }
-
+    
 
     const renderLoading = () => {
         return (
@@ -43,11 +46,7 @@ export default function Submissions(props){
     }
 
 
-    const handleSubmit = () => {
-        console.log("submit");
-    }
-
-    const renderSubmissions = () => {
+    const renderSubmission = () => {
         return (
             <>
                 <div className="grid lg:grid-cols-2 gap-4">
@@ -112,103 +111,58 @@ export default function Submissions(props){
                             </div>
                         )}
                     </div>
-
                 </div>
 
+
                 <div className="flex justify-end mt-2">
-                    <Button onClick={onClick}>
-                        Submit
+                    <Button 
+                        onClick={() => {setShowModal(true); setShowAlert(false)}}>
+                        Submit my answer
                     </Button>
 
                     <Modal
-                        show={false}
+                        show={showModal}
                         size="md"
                         popup={true}
-                        onClose={onClose}
+                        onClose={() => {setShowModal(false); setShowAlert(false)} }
                     >
                         <Modal.Header />
                         <Modal.Body>
-                        <div className="text-center">
-                           
-                            <h3 className="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
-                            Are you sure you want to delete this product?
-                            </h3>
-                            <div className="flex justify-center gap-4">
-                            <Button
-                                color="failure"
-                                onClick={onClick}
-                            >
-                                Yes, I'm sure
-                            </Button>
-                            <Button
-                                color="gray"
-                                onClick={onClick}
-                            >
-                                No, cancel
-                            </Button>
+                            <div className="text-center">
+                                <p className="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
+                                    Are you sure you want to submit your answer?
+                                </p>
+                                <div className="flex justify-center gap-4">
+                                    <Button onClick={() => handleSubmit()} color="failure">Yes, I'm sure</Button>
+                                    <Button onClick={() => {setShowModal(false); setShowAlert(false)}} color="gray">
+                                            No, cancel
+                                    </Button>
+                                </div>
                             </div>
-                        </div>
+
+                            <div>
+                                { showAlert && (
+                                    <Alert color="failure" className="mt-4">
+                                        <span>
+                                            You need to upload your results and model to submit your answer.
+                                        </span>
+                                    </Alert>
+                                )}
+                            </div>
+
                         </Modal.Body>
                     </Modal>
                 </div>
     
     
-                {/* previous submission */}
-                <div className="my-10">
-                    <p className='mb-2 font-semibold text-2xl'>Your previous submission</p>
-                    <div className="w-64 h-16 bg-white dark:bg-gray-800 rounded-lg border dark:border-gray-700 shadow-md px-2">
-                        <div className="flex items-center justify-between w-full h-full p-2">
-                            <div>
-                                <div className="flex center">
-                                    <p className="text-sm font-semibold truncate">
-                                        {submissions.results.file.name}
-                                    </p>
-                                    <p className="text-xs font-light truncate ml-1">
-                                        ({submissions.results.file.size} bytes)
-                                    </p>
-                                </div>
-                                <p className="mt-1 text-xs font-extralight truncate text-gray-400">
-                                    {submissions.results.uploadDate}
-                                </p>
-                            </div>
-    
-                            <BsCloudDownload 
-                                className="w-5 h-5 justify-self-end cursor-pointer text-gray-500 hover:text-green-500"
-                                onClick={(event) => downloadFile(event, submissions.results.file.url)} 
-                            />
-                        </div>
-                    </div>
-    
-                    <div className="mt-2 w-64 h-16 bg-white dark:bg-gray-800 rounded-lg border dark:border-gray-700 shadow-md px-2">
-                        <div className="flex items-center justify-between w-full h-full p-2">
-                            <div>
-                                <div className="flex center">
-                                    <p className="text-sm font-semibold truncate">
-                                        {submissions.model.file.name}
-                                    </p>
-                                    <p className="text-xs font-light truncate ml-1">
-                                        ({submissions.model.file.size} bytes)
-                                    </p>
-                                </div>
-                                <p className="mt-1 text-xs font-extralight truncate text-gray-400">
-                                    {submissions.model.uploadDate}
-                                </p>
-                            </div>
-    
-                            <BsCloudDownload 
-                                className="w-5 h-5 justify-self-end cursor-pointer text-gray-500 hover:text-green-500"
-                                onClick={(event) => downloadFile(event, submissions.model.file.url)} 
-                            />
-                        </div>
-                    </div>
-                </div>
+                <PreviousSubmissions submissions={submissions} />
             </>
         )
     }
 
     return (
         <>
-            {loading ? renderLoading() : renderSubmissions()}
+            {loading ? renderLoading() : renderSubmission()}
         </>
     );
 }
