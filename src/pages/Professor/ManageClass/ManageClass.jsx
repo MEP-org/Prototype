@@ -1,30 +1,23 @@
-import { useLocation } from "react-router-dom";
-import ImportClassButton from './ImportClassButton.jsx';
-import AddStudentButton from './AddStudentButton.jsx';
-import StudentsTable from './StudentsTable.jsx';
-import MembersQuantity from './MembersQuantity.jsx';
+import {useEffect, useState} from 'react';
+import {useParams} from 'react-router-dom';
+
+import { Class } from '../../../model/Class';
+import Banner from './Banner';
+import StudentsTable from './StudentsTable';
 
 export default function ManageClass(){
 
-    const location = useLocation();
-    const {class : myClass} = location.state || {class : null};
-    console.log(myClass);
+    const id = useParams().id || undefined
+    const [loading, setLoading] = useState(false)
+    const [classData, setClassData] = useState(Class)
 
     return (
         <>
-            <div className='w-full container mt-8'>
-                    <div className='font-bold text-5xl mb-4'>
-                        Classe {myClass.name}
-                    </div>
-                    <div className='relative flex'>
-                        <ImportClassButton />
-                        <div className='w-4'></div>
-                        <AddStudentButton />
-                    </div>
-                    <div className='h-12'></div>
-                    <MembersQuantity quantity={myClass.students.length} />
-                    <div className='h-4'></div>
-                    <StudentsTable myClass={myClass.students} />
+            <div className="container my-10">
+                
+                <Banner classData={classData} setClassData={setClassData}/>
+                <div className="mb-10"/>
+                <StudentsTable classData={classData} setClassData={setClassData}/>
             </div>
         </>
     )
