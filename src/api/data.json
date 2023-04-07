@@ -161,9 +161,9 @@
             "name": "ML-C1"
         },
 
-        "description": {},
+        "description": "# Description \nThis is the description of the assignment",
 
-        "evaluationRules": {},
+        "evaluationRules": "# Evaluation Rules \n 1. Rule one\n2. Rule two",
 
         "datasets": {
             "train": {
