@@ -8,7 +8,7 @@ import Results from "./Results"
 
 export default function ExercicesTab(props){
 
-    const {handleChange, exercice, classes, loading} = props
+    const {handleChange, exercice, classes, metrics, loading} = props
 
     const renderLoading = () => {
         return (

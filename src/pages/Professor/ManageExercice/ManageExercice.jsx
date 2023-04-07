@@ -11,6 +11,7 @@ export default function ManageExercice(props){
     const id = useParams().id || undefined
     const [loading, setLoading] = useState(false)
     const [classes, setClasses] = useState([])
+    const [metrics, setMetrics] = useState([])
     const [exercice, setExercice] = useState({
         id: id,
         title: undefined,
@@ -64,7 +65,8 @@ export default function ManageExercice(props){
                 />
                 <ExercicesTab 
                     exercice={exercice} 
-                    classes={classes} 
+                    classes={classes}
+                    metrics={metrics}
                     handleChange={handleChange} 
                     loading={loading} 
                 />

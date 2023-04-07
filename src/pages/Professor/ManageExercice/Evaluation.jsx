@@ -1,5 +1,5 @@
 import{ useState } from 'react'
-import { Label, TextInput } from 'flowbite-react'
+import { Label, TextInput, Dropdown, Checkbox } from 'flowbite-react'
 import DatePicker from "tailwind-datepicker-react"
 import MarkdownEditor from "../../../components/MarkdownEditor"
 
@@ -50,6 +50,36 @@ export default function Evaluation(props){
                         onChange={props.handleChange} 
                         value={props.exercice.attemptsLimit} 
                     />
+                </div>
+
+                <div className="w-96">
+                    <Label>Metrics</Label>
+                    <div className='mt-2'/>
+                    <Dropdown
+                        label='Choose metrics'
+                        dismissOnClick={false}
+                    >
+                        <Dropdown.Item>
+                            <Checkbox
+                                id="accuracy"
+                                name="accuracy"
+                                value={false}
+                                onChange={() => {}}
+                                className="mr-2"
+                            />
+                            <Label htmlFor="accuracy" className="cursor-pointer">Accuracy</Label>
+                        </Dropdown.Item>
+                        <Dropdown.Item>
+                            <Checkbox
+                                id="precision"
+                                name="precision"
+                                value={false}
+                                onChange={() => {}}
+                                className="mr-2"
+                            />
+                            <Label htmlFor="precision" className="cursor-pointer">Precision</Label>
+                        </Dropdown.Item>
+                    </Dropdown>
                 </div>
 
             </div>

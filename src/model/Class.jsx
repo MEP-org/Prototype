@@ -1,13 +1,13 @@
 
 export const Class = {
-    id: undefined,
-    name: undefined,
-    professor: undefined,
+    id: '',
+    name: '',
+    professor: '',
     img: "https://flowbite.com/docs/images/carousel/carousel-1.svg",
     students: [
         // {
-        //     nMec: undefined,
-        //     name: undefined,
+        //     nMec: '',
+        //     name: '',
         // }
     ],
 }

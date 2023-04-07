@@ -4,7 +4,7 @@ import { FaUserEdit, FaTrash, FaPlusCircle } from "react-icons/fa"
 
 export default function StudentsTable({classData, setClassData}){
 
-    const [student, setStudent] = useState({nMecc: '', name: ''})
+    const [student, setStudent] = useState({nMec: '', name: ''})
 
     const handleAddStudent = (e) => {
         e.preventDefault();
