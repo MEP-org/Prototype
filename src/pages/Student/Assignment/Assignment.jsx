@@ -3,13 +3,15 @@ import { useParams } from 'react-router-dom';
 import AssignmentTab from "./AssignmentTab";
 import { ExercicesAPI } from "../../../api/ExercicesAPI";
 import Banner from "./Banner";
+import { Assignment as AssignmentInit } from "../../../model/Assignment";
 
 
 export default function Assignment(){
 
     const { assignmentId } = useParams();
     const [loading, setLoading] = useState(false);
-    const [assignment, setAssignment] = useState([]);
+    const [assignment, setAssignment] = useState(AssignmentInit);
+
 
     useEffect(() => {
         setLoading(true);
@@ -17,13 +19,13 @@ export default function Assignment(){
         ExercicesAPI.getAssignmentById(studentID)
         .then((data) => {
             setAssignment(data);
-            console.log(data);
         })
         .finally(() => {
             setLoading(false);
         })
     }, []);
 
+    
     return (
         <>
             <div className='w-full container mt-8'>

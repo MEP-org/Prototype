@@ -53,7 +53,7 @@ export default function Results(props) {
                 </div>
 
 
-                <hr class="h-px mt-14 mb-5 bg-gray-200 border-0 dark:bg-gray-700"></hr>
+                <hr className="h-px mt-14 mb-5 bg-gray-200 border-0 dark:bg-gray-700"></hr>
 
 
                 {/* Class results */}
