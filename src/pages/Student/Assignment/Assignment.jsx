@@ -12,10 +12,6 @@ export default function Assignment(){
     const [loading, setLoading] = useState(false);
     const [assignment, setAssignment] = useState(AssignmentInit);
 
-    const handleChange = (event) => {
-        const { name, value } = event.target;
-        setAssignment((prevAssignment) => ({ ...prevAssignment, [name]: value }));
-    };
 
     useEffect(() => {
         setLoading(true);
@@ -29,11 +25,12 @@ export default function Assignment(){
         })
     }, []);
 
+    
     return (
         <>
             <div className='w-full container mt-8'>
                 <Banner assignment={assignment} loading={loading} />
-                <AssignmentTab assignment={assignment} handleChange={handleChange} loading={loading} />
+                <AssignmentTab assignment={assignment} loading={loading} />
             </div>
         </>
     )

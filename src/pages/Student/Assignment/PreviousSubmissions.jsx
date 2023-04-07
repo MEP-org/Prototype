@@ -22,10 +22,10 @@ export default function PreviousSubmissions(props){
                         <div>
                             <div className="flex center">
                                 <p className="text-sm font-semibold truncate">
-                                    {submissions.results.file.name}
+                                    {submissions.results.name}
                                 </p>
                                 <p className="text-xs font-light truncate ml-1">
-                                    ({submissions.results.file.size} bytes)
+                                    ({submissions.results.size} bytes)
                                 </p>
                             </div>
                             <p className="mt-1 text-xs font-extralight truncate text-gray-400">
@@ -35,7 +35,7 @@ export default function PreviousSubmissions(props){
 
                         <BsCloudDownload 
                             className="w-5 h-5 justify-self-end cursor-pointer text-gray-500 hover:text-green-500"
-                            onClick={(event) => downloadFile(event, submissions.results.file.url)} 
+                            onClick={(event) => downloadFile(event, submissions.results.url)} 
                         />
                     </div>
                 </div>
@@ -45,10 +45,10 @@ export default function PreviousSubmissions(props){
                         <div>
                             <div className="flex center">
                                 <p className="text-sm font-semibold truncate">
-                                    {submissions.model.file.name}
+                                    {submissions.model.name}
                                 </p>
                                 <p className="text-xs font-light truncate ml-1">
-                                    ({submissions.model.file.size} bytes)
+                                    ({submissions.model.size} bytes)
                                 </p>
                             </div>
                             <p className="mt-1 text-xs font-extralight truncate text-gray-400">
@@ -58,7 +58,7 @@ export default function PreviousSubmissions(props){
 
                         <BsCloudDownload 
                             className="w-5 h-5 justify-self-end cursor-pointer text-gray-500 hover:text-green-500"
-                            onClick={(event) => downloadFile(event, submissions.model.file.url)} 
+                            onClick={(event) => downloadFile(event, submissions.model.url)} 
                         />
                     </div>
                 </div>
