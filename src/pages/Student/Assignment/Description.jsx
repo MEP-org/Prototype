@@ -16,7 +16,6 @@ export default function Description(props){
 
 
     const renderDescription = () => {
-
         return (
             <>
                 <div className='h-[80vh] mt-2'>
