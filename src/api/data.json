@@ -167,13 +167,13 @@
 
         "dataset": {
             "train": {
-                "fileName": "train.csv",
+                "name": "train.csv",
                 "size": 145,
                 "url": "https://sample-videos.com/csv/Sample-Spreadsheet-10-rows.csv",
                 "uploadDate": "2023-04-01"
             },
             "test": {
-                "fileName": "test.csv",
+                "name": "test.csv",
                 "size": 45,
                 "url": "https://sample-videos.com/csv/Sample-Spreadsheet-10-rows.csv",
                 "uploadDate": "2023-04-01"
@@ -183,7 +183,7 @@
         "submissions": {
             "results": {
                 "file": {
-                    "fileName": "test.csv",
+                    "name": "test.csv",
                     "size": 10,
                     "url": "https://sample-videos.com/csv/Sample-Spreadsheet-10-rows.csv"
                 },
@@ -191,7 +191,7 @@
             },
             "model": {
                 "file": {
-                    "fileName": "test.py",
+                    "name": "test.py",
                     "size": 6,
                     "url": "https://sample-videos.com/csv/Sample-Spreadsheet-10-rows.csv"
                 },
