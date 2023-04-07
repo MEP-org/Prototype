@@ -165,7 +165,7 @@
 
         "evaluationRules": {},
 
-        "dataset": {
+        "datasets": {
             "train": {
                 "name": "train.csv",
                 "size": 145,
@@ -182,19 +182,15 @@
 
         "submissions": {
             "results": {
-                "file": {
-                    "name": "test.csv",
-                    "size": 10,
-                    "url": "https://sample-videos.com/csv/Sample-Spreadsheet-10-rows.csv"
-                },
+                "name": "test.csv",
+                "size": 10,
+                "url": "https://sample-videos.com/csv/Sample-Spreadsheet-10-rows.csv",
                 "uploadDate": "2023-04-03"
             },
             "model": {
-                "file": {
-                    "name": "test.py",
-                    "size": 6,
-                    "url": "https://sample-videos.com/csv/Sample-Spreadsheet-10-rows.csv"
-                },
+                "name": "test.py",
+                "size": 6,
+                "url": "https://sample-videos.com/csv/Sample-Spreadsheet-10-rows.csv",
                 "uploadDate": "2023-04-03"
             }
         },

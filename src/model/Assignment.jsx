@@ -13,7 +13,7 @@ export const Assignment = {
     },
     description: undefined,
     evaluationRules: undefined,
-    dataset: {
+    datasets: {
         train: {
             fileName: undefined,
             size: undefined,
@@ -32,17 +32,17 @@ export const Assignment = {
             file: {
                 name: undefined,
                 size: undefined,
-                url: undefined
-            },
-            uploadDate: undefined
+                url: undefined,
+                uploadDate: undefined
+            }
         },
         model: {
             file: {
                 name: undefined,
                 size: undefined,
-                url: undefined
-            },
-            uploadDate: undefined
+                url: undefined,
+                uploadDate: undefined
+            }
         }
     },
     results: {
