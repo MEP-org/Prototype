@@ -1,77 +1,105 @@
-import { Table } from 'flowbite-react'
-import { FaUserEdit, FaTrashAlt } from 'react-icons/fa'
+import { useState } from "react"
+import { Table, Label,TextInput, Button } from "flowbite-react"
+import { FaUserEdit, FaTrash, FaPlusCircle } from "react-icons/fa"
 
+export default function StudentsTable({classData, setClassData}){
 
-export default function StudentsTable(props){
+    const [student, setStudent] = useState({nMecc: '', name: ''})
 
-    console.log(props.myClass);
+    const handleAddStudent = (e) => {
+        e.preventDefault();
+        setClassData({
+            ...classData,
+            students: [...classData.students, student]
+        })
+        setStudent({nMec: '', name: ''})
 
-
-    const renderStudentsTable = () => {
-
-        return (
-                <>
-                    {props.myClass.map((item) => 
-                        <Table.Row key={item.Nmec} className="bg-white dark:border-gray-700 dark:bg-gray-800">
-                            <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                                {item.Nmec}
-                            </Table.Cell>
-                            <Table.Cell>
-                                {item.name}
-                            </Table.Cell>
-                            <Table.Cell>
-                            {/* Edit Element */}
-                            <a href="">
-                                <div>
-                                    <FaUserEdit />
-                                </div>
-                            </a>
-                            </Table.Cell>
-                            <Table.Cell>
-                                {/* Delete Element */}
-                                <a href="">
-                                    <div>
-                                        <FaTrashAlt />
-                                    </div>
-                                </a>
-                            </Table.Cell>
-                        </Table.Row>
-                    )}
-                </>  
-        );
     }
-    
+
+    const handleDeleteStudent = (nMec) => {
+        setClassData({
+            ...classData,
+            students: classData.students.filter((student) => student.nMec !== nMec)
+        })
+    }
+
+    const handleEditStudent = (nMec, name) => {
+        // TODO
+    }
 
     return (
         <>
-            <div>
-                <Table striped={true} hoverable={true} style={{ fontSize: '1em' }}>
-                    <Table.Head style={{ fontSize: '1.2em', height: '3em' }}>
-                        <Table.HeadCell className='w-1/6'>
-                            NMEC
+            <form>
+                <div className='grid grid-cols-7 gap-10 mb-8'>
+                    <div className='col-span-2'>
+                        <Label>Student N_mec</Label>
+                        <div className='mb-2' />
+                        <TextInput 
+                            placeholder='N_mec' 
+                            value={student.nMec}
+                            onChange={(e) => setStudent({...student, nMec: e.target.value})}
+                        />
+                    </div>
+
+                    <div className='col-span-4'>
+                        <Label>Student Name</Label>
+                        <div className='mb-2' />
+                        <TextInput 
+                            placeholder='Name'
+                            value={student.name}
+                            onChange={(e) => setStudent({...student, name: e.target.value})}
+                        />
+                    </div>
+
+                    <div className='mt-8' >
+                        <Button type="submit" onClick={handleAddStudent}>
+                            <div className='w-32 text-center' id='manageStudent'>Add Students</div>
+                            <FaPlusCircle />
+                        </Button>
+                    </div>
+                </div>
+            </form>
+
+            {classData.students.length === 0 &&
+                <div className="font-bold text-4xl text-center">
+                    No students yet
+                </div>
+            }
+            {classData.students.length > 0 &&
+                <Table
+                    striped={true}
+                    hoverable={true}
+                >
+                    <Table.Head>
+                        <Table.HeadCell className='w-36'>
+                            N_mec
                         </Table.HeadCell>
                         <Table.HeadCell>
-                            Nome
+                            Name
                         </Table.HeadCell>
-                        <Table.HeadCell className='w-1/12'>
-                        <span className="sr-only">
-                            Edit
-                        </span>
-                        </Table.HeadCell>
-                        <Table.HeadCell className='w-1/12'>
-                        <span className="sr-only">
-                            Delete
-                        </span>
-                        </Table.HeadCell>
+                        <Table.HeadCell className='w-20'/>
+                        <Table.HeadCell className='w-20'/>
                     </Table.Head>
-                    <Table.Body className="divide-y">
-                        {renderStudentsTable()}
-                        {/* {rows} */}
+                    <Table.Body>
+                        {classData.students.map((student) => (
+                            <Table.Row key={student.nMec}>
+                                <Table.Cell>
+                                    {student.nMec}
+                                </Table.Cell>
+                                <Table.Cell>
+                                    {student.name}
+                                </Table.Cell>
+                                <Table.Cell className='cursor-pointer hover:text-blue-500' onClick={() => handleEditStudent(student.nMec, student.name)}>
+                                    <FaUserEdit className="mx-auto" />
+                                </Table.Cell>
+                                <Table.Cell className='cursor-pointer hover:text-red-500' onClick={() => handleDeleteStudent(student.nMec)}>
+                                    <FaTrash className="mx-auto" />
+                                </Table.Cell>
+                            </Table.Row>
+                        ))}
                     </Table.Body>
-                    </Table>
-            </div>
+                </Table>
+            }
         </>
     )
-
-
 }
