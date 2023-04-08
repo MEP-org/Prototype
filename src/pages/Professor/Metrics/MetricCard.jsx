@@ -16,7 +16,7 @@ export default function MetricCard({ metric }) {
                     </div>
                     <div className="flex justify-end items-end">
                         <div className="text-sm text-gray-500">
-                            Metric created by: <span className="font-bold">{metric.author.name}</span>
+                            Metric added by: <span className="font-bold">{metric.author.name}</span>
                         </div>
                     </div>
                 </div>

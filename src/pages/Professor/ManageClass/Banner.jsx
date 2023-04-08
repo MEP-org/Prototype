@@ -51,7 +51,7 @@ export default function Banner({classData, setClassData}) {
                 </div>
             </div>
 
-            <div className="grid grid-cols-3 gap-10">
+            <div className="grid grid-cols-3 gap-6">
                 
                 <div className='drop-shadow-lg h-52 relative'>
                     <img src={classData.img} alt="class img" className="h-full w-full object-cover rounded-lg"/>

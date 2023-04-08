@@ -12,7 +12,7 @@ export default function Description(props){
 
     return (
         <>
-            <div className="grid grid-cols-3 gap-10">
+            <div className="grid grid-cols-3 gap-6">
 
                 <div className="col-span-2">
                     <Label>Title</Label>

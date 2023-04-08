@@ -21,7 +21,7 @@ export default function Filters(props){
 
     return (
         <>
-            <div className='grid grid-cols-5 gap-10'>
+            <div className='grid grid-cols-5 gap-6'>
 
                 <div className='col-span-2 '>
                     <Label htmlFor="search" value="Tittle" />

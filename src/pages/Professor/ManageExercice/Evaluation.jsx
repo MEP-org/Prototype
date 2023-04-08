@@ -21,7 +21,7 @@ export default function Evaluation(props){
 
 	return (
         <>
-            <div className='flex gap-10'>
+            <div className='flex gap-6'>
 
                 <div className="relative w-[296px]">
                     <Label>Deadline date</Label>

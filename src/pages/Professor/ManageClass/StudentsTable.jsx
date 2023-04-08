@@ -30,7 +30,7 @@ export default function StudentsTable({classData, setClassData}){
     return (
         <>
             <form>
-                <div className='grid grid-cols-7 gap-10 mb-8'>
+                <div className='grid grid-cols-7 gap-6 mb-8'>
                     <div className='col-span-2'>
                         <Label>Student N_mec</Label>
                         <div className='mb-2' />
