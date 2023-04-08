@@ -4,7 +4,7 @@ export default function MetricCard({ metric }) {
 
     return (
         <>
-            <Card className="w-full h-[200px]">
+            <Card className="w-full min-h-[200px]">
                 <div className="flex flex-col justify-between h-full">
                     <div className="flex flex-col">
                         <div className="font-bold text-2xl mb-2">
@@ -16,7 +16,7 @@ export default function MetricCard({ metric }) {
                     </div>
                     <div className="flex justify-end items-end">
                         <div className="text-sm text-gray-500">
-                            Metric created by: <span className="font-bold">{metric.author}</span>
+                            Metric created by: <span className="font-bold">{metric.author.name}</span>
                         </div>
                     </div>
                 </div>

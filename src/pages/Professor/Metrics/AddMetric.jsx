@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { PrismAsyncLight as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { oneDark as DarkTheme, oneLight as LightTheme } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { useThemeMode, Label, TextInput, Textarea, Button } from "flowbite-react";
 import {AiFillCloseCircle } from "react-icons/ai";

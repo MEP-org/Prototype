@@ -1,10 +1,29 @@
+import { useEffect, useState } from 'react'
 import {Tabs} from 'flowbite-react'
 
 import AllMetrics from './AllMetrics'
 import MyMetrics from './MyMetrics'
 import AddMetric from './AddMetric'
+import Loading from '../../../components/Loading'
+
+import { MetricsAPI } from '../../../api/MetricsApi'
 
 export default function Metrics(){
+
+    const [metrics, setMetrics] = useState([])
+    const [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+        setLoading(true)
+        MetricsAPI.getMetrics()
+        .then((data) => {
+            setMetrics(data)
+        })
+        .finally(() => {
+            setLoading(false)
+        })
+    }, [])
+
 
     return (
         <>
@@ -22,19 +41,19 @@ export default function Metrics(){
                         title="All Metrics"
                         // icon={}
                     >
-                        <AllMetrics />
+                        {loading ? <Loading /> : <AllMetrics metrics={metrics} />}
                     </Tabs.Item>
                     <Tabs.Item
                         title="My Metrics"
                         // icon={}
                     >
-                        <MyMetrics />
+                        {loading ? <Loading /> : <MyMetrics metrics={metrics} />}
                     </Tabs.Item>
                     <Tabs.Item
                         title="Add Metric"
                         // icon={}
                     >
-                        <AddMetric />
+                        {loading ? <Loading /> : <AddMetric metrics={metrics} />}
                     </Tabs.Item>
                 </Tabs.Group>
             </div>

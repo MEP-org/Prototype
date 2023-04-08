@@ -3,7 +3,7 @@ import { assignment } from './data.json';
 export const ExercicesAPI = {
     getByProf: async function(profId) {
         // add a delay to simulate a network request
-        await new Promise((resolve) => setTimeout(resolve, 2000));
+        await new Promise((resolve) => setTimeout(resolve, 1000));
         return [
             {
                 "id": 1,
@@ -16,7 +16,7 @@ export const ExercicesAPI = {
     },
     getByStudent: async function(studentId) {
         // add a delay to simulate a network request
-        await new Promise((resolve) => setTimeout(resolve, 2000));
+        await new Promise((resolve) => setTimeout(resolve, 1000));
         return [
             {
                 "id": 1,
@@ -29,19 +29,19 @@ export const ExercicesAPI = {
     },
     getPublic: async function() {
         // add a delay to simulate a network request
-        await new Promise((resolve) => setTimeout(resolve, 2000));
+        await new Promise((resolve) => setTimeout(resolve, 1000));
         return []
     },
 
     getAssignmentById: async function(assignmentId) {
         // add a delay to simulate a network request
-        await new Promise((resolve) => setTimeout(resolve, 2000));
+        await new Promise((resolve) => setTimeout(resolve, 1000));
         return assignment;
     },
 
     getProfExerciceById: async function(profId, exerciceId) {
         // add a delay to simulate a network request
-        await new Promise((resolve) => setTimeout(resolve, 2000));
+        await new Promise((resolve) => setTimeout(resolve, 1000));
         return {
             "exercice": undefined,
             "classes": []
