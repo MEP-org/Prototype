@@ -7,11 +7,10 @@ export default function Banner(){
                 <div className='font-bold text-5xl mb-4'>
                     Public Exercices
                 </div>
-                <div className='text-lg mb-4 lg:w-1/2 text-justify'>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    <p/>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                    blanditiis praesentium voluptatum deleniti atque corrupti quos
+                <div className='text-lg lg:w-1/2 text-justify'>
+                    Here you can see all the public exercices available in the platform.
+                    <br />
+                    Usefull to practice your skills and find datasets.
                 </div>
             </div>
         </>

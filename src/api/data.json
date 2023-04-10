@@ -146,6 +146,42 @@
         "position": 3
     },
 
+    "student_assignments": [
+        {
+            "id": 1,
+            "title": "Titanic - Machine Learning from Disaster",
+            "description": "Subtitle orem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit",
+            "published": "2023-04-01",
+            "deadline": "2023-05-01",
+            "studentClass": {
+                "id": 1,
+                "name": "ML-C1"
+            }
+        },
+        {
+            "id": 2,
+            "title": "Predicting a Biological Response",
+            "description": "Subtitle orem ipsum dolor sit amet",
+            "published": "2024-04-01",
+            "deadline": "2025-05-01",
+            "studentClass": {
+                "id": 3,
+                "name": "TAA-C1"
+            }
+        },
+        {
+            "id": 3,
+            "title": "Parkinson's Freezing of Gait Prediction",
+            "description": "Event detection from wearable sensor data",
+            "published": "2024-04-01",
+            "deadline": "2025-05-01",
+            "studentClass": {
+                "id": 3,
+                "name": "TAA-C1"
+            }
+        }
+    ],
+
 
     "assignment": {
         "id": 1,

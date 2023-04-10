@@ -152,7 +152,7 @@ export default function MyNavbar(props){
                     <Outlet />
                 </div>
 
-                { type === 'professor' && <Particles id="tsparticles" options={options} init={particlesInit} /> }
+                <Particles id="tsparticles" options={options} init={particlesInit} />
             </div>
         </>
     )

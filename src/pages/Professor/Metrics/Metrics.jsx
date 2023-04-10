@@ -31,6 +31,9 @@ export default function Metrics(){
                 <div className='font-bold text-5xl mb-4'>
                     Metrics
                 </div>
+                <div className='mt-2 text-lg'>
+                    Metrics are used to evaluate the performance of your students.
+                </div>
 
                 <Tabs.Group
                     aria-label="Exercice Tabs"

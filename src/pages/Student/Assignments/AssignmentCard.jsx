@@ -1,11 +1,11 @@
 import { FaArrowRight, FaBook } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import { Card } from 'flowbite-react';
+import { Card, Button } from 'flowbite-react';
 
 export default function AssignmentCard(props){
 
     const navigate = useNavigate();
-    const {title, description, published, deadline, studentClass} = props.content;
+    const {title, description, published, deadline, studentClass} = props.exercice;
 
     return (
         <>
@@ -23,7 +23,7 @@ export default function AssignmentCard(props){
                 </div>
 
 
-                <div className="mt-auto flex justify-between items-end">
+                <div className="mt-auto flex justify-between items-end overflow-hidden">
                     <div>
                         <div className="text-gray-700 dark:text-gray-400">
                             <FaBook className='inline-block mr-2' size={12}  />
@@ -47,9 +47,10 @@ export default function AssignmentCard(props){
                         </div>
                     </div>
 
-                    <button className="my-btn h-11 w-11" onClick={() => {navigate("/student/assignments/1")}}>
+                    <Button className="!p-0 !h-11 !w-11" onClick={() => {navigate("/student/assignments/1")}}>
                         <FaArrowRight />
-                    </button>
+                    </Button>
+
                 </div>
             </div>
         </Card>

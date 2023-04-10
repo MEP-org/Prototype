@@ -1,4 +1,4 @@
-import { assignment } from './data.json';
+import { assignment, student_assignments } from './data.json';
 
 export const ExercicesAPI = {
     getByProf: async function(profId) {
@@ -17,16 +17,9 @@ export const ExercicesAPI = {
     getByStudent: async function(studentId) {
         // add a delay to simulate a network request
         await new Promise((resolve) => setTimeout(resolve, 1000));
-        return [
-            {
-                "id": 1,
-                "class": {
-                    "id": 1,
-                    "name": "ML-C1"
-                }
-            }
-        ]
+        return student_assignments;
     },
+    
     getPublic: async function() {
         // add a delay to simulate a network request
         await new Promise((resolve) => setTimeout(resolve, 1000));

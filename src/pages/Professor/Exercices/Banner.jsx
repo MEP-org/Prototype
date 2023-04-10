@@ -11,11 +11,10 @@ export default function Banner(){
                     <div className='font-bold text-5xl mb-4'>
                         Exercices
                     </div>
-                    <div className='text-lg mb-4 text-justify'>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        <p/>
-                        At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                        blanditiis praesentium voluptatum deleniti atque corrupti quos
+                    <div className='text-lg'>
+                        Exercices are used to evaluate the performance of your students.
+                        <br />
+                        Here you can see or create your exercices, or see the available metrics.
                     </div>
                 </div>
 

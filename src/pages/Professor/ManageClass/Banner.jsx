@@ -11,7 +11,7 @@ export default function Banner({classData, setClassData}) {
     const navigate = useNavigate()
 
     useEffect(() => {
-        if (!classData.id) setShowModal(true)
+        if (classData.id === undefined) setShowModal(true)
     }, [classData.id])
 
     const handleSubmit = () => {

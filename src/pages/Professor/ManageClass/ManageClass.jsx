@@ -11,6 +11,12 @@ export default function ManageClass(){
     const [loading, setLoading] = useState(false)
     const [classData, setClassData] = useState(Class)
 
+    useEffect(() => {
+        setLoading(true)
+        setClassData({...Class, id: id})
+        setLoading(false)
+    }, [id])
+
     return (
         <>
             <div className="container my-10">
