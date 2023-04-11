@@ -6,8 +6,8 @@ export default function Filters(props){
     const {filter, setFilter, exercices} = props;
     const classes = exercices.map((exercice) => {
         return {
-            'id': exercice.class.id,
-            'name': exercice.class.name
+            'id': exercice.studentClass.id,
+            'name': exercice.studentClass.name
         }
     });
 

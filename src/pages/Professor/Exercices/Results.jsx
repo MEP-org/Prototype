@@ -27,7 +27,7 @@ export default function Results(props){
     const exercicesFilter = (exercice) => {
         // TODO: Implement filter
         console.log(filter, exercice);
-        return exercice.id < 1
+        return true;
     }   
 
     const renderExercices = () => {
