@@ -1,18 +1,18 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
-import { ExercicesAPI } from "../../../api/ExercicesAPI"
+import { ExercisesAPI } from "../../../api/ExercisesAPI"
 import { ClassesAPI } from "../../../api/ClassesAPI"
 
 import Banner from "./Banner"
-import ExercicesTab from "./ExercicesTab"
+import ExercisesTab from "./ExercisesTab"
 
-export default function ManageExercice(props){
+export default function ManageExercise(props){
 
     const id = useParams().id || undefined
     const [loading, setLoading] = useState(false)
     const [classes, setClasses] = useState([])
     const [metrics, setMetrics] = useState([])
-    const [exercice, setExercice] = useState({
+    const [exercise, setExercise] = useState({
         id: id,
         title: undefined,
         subtitle: undefined,
@@ -28,16 +28,16 @@ export default function ManageExercice(props){
 
     const handleChange = (event) => {
         const { name, value } = event.target;
-        setExercice((prevExercice) => ({ ...prevExercice, [name]: value }));
+        setExercise((prevExercise) => ({ ...prevExercise, [name]: value }));
     };
 
     useEffect(() => {
         setLoading(true)
         const profId = 1
         if(id) {
-            ExercicesAPI.getProfExerciceById(profId, id)
+            ExercisesAPI.getProfExerciseById(profId, id)
             .then((data) => {
-                // setExercice(data.exercice)
+                // setExercise(data.exercise)
                 setClasses(data.classes)
             })
             .finally(() => {
@@ -60,11 +60,11 @@ export default function ManageExercice(props){
         <>
             <div className="container">
                 <Banner 
-                    exercice={exercice} 
+                    exercise={exercise} 
                     loading={loading} 
                 />
-                <ExercicesTab 
-                    exercice={exercice} 
+                <ExercisesTab 
+                    exercise={exercise} 
                     classes={classes}
                     metrics={metrics}
                     handleChange={handleChange} 

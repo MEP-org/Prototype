@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Banner from './Banner';
 import Filters from './Filters';
 import Results from './Results';
-import { ExercicesAPI } from "../../../api/ExercicesAPI";
+import { ExercisesAPI } from "../../../api/ExercisesAPI";
 import AssignmentCard from './AssignmentCard';
 
 export default function Assignments(){
@@ -15,14 +15,14 @@ export default function Assignments(){
     });
 
     const [loading, setLoading] = useState(false);
-    const [exercices, setExercices] = useState([]);
+    const [exercises, setExercises] = useState([]);
 
     useEffect(() => {
         setLoading(true);
         const studentId = 1;
-        ExercicesAPI.getByStudent(studentId)
+        ExercisesAPI.getByStudent(studentId)
         .then((data) => {
-            setExercices(data);
+            setExercises(data);
         })
         .finally(() => {
             setLoading(false);
@@ -35,9 +35,9 @@ export default function Assignments(){
             <div className='container py-8'>
                 <Banner />
                 <div className='mb-10' />
-                <Filters filter={filter} setFilter={setFilter} exercices={exercices}/>
+                <Filters filter={filter} setFilter={setFilter} exercises={exercises}/>
                 <div className='mb-10' />
-                <Results exercices={exercices} loading={loading} filter={filter}/>
+                <Results exercises={exercises} loading={loading} filter={filter}/>
             </div>
         </>
     )

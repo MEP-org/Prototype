@@ -13,7 +13,7 @@ export default function Banner(){
                         Classes
                     </div>
                     <div className='text-lg'>
-                        Classes are used to group students so you can assign exercices to them.
+                        Classes are used to group students so you can assign exercises to them.
                     </div>
                 </div>
 

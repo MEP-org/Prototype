@@ -1,4 +1,4 @@
-export const PublicExercice = {
+export const PublicExercise = {
     id: undefined,
     title: undefined,
     subtitle: undefined,

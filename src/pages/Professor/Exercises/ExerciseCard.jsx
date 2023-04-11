@@ -2,9 +2,9 @@ import { FaArrowRight, FaBook, FaGlobeAmericas } from "react-icons/fa";
 import { Card } from 'flowbite-react';
 import { Link } from 'react-router-dom';
 
-export default function ExerciceCard(props) {
+export default function ExerciseCard(props) {
 
-    const {id, title, description, visible, maxAttempts, totalAnswers, maxAnswers, published, deadline, studentClass} = props.exercice;
+    const {id, title, description, visible, maxAttempts, totalAnswers, maxAnswers, published, deadline, studentClass} = props.exercise;
     
     return ( 
         <>
@@ -70,7 +70,7 @@ export default function ExerciceCard(props) {
                         </div>
                     </div>
 
-                    <Link to={`/professor/exercices/${id}`}>
+                    <Link to={`/professor/exercises/${id}`}>
                         <button className="my-btn h-11 w-11">
                             <FaArrowRight />
                         </button>

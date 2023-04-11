@@ -6,13 +6,13 @@ import {AiFillCloseCircle} from "react-icons/ai";
 
 export default function Datasets(props){
 
-    const { handleChange, exercice } = props
+    const { handleChange, exercise } = props
     const [training, setTraining] = useState([])
     const [test, setTest] = useState([])
 
     const handleFileUpload = (event, type) => {
         // csv file
-        // put in exercice.dataset.{type}
+        // put in exercise.dataset.{type}
         // [[header1, header2, header3], [value1, value2, value3], [value1, value2, value3]]
         const file = event.target.files[0]
         const reader = new FileReader()
@@ -79,15 +79,15 @@ export default function Datasets(props){
                         <input id="dropzone-results" type="file" accept=".csv,.txt" className="hidden" onChange={(e) => handleFileUpload(e, "training")} />
                     </label>
 
-                    {exercice.dataset.training && (
+                    {exercise.dataset.training && (
                         <div className="absolute bottom-4 right-4 w-64 h-16 bg-white dark:bg-gray-800 rounded-lg shadow-lg px-2">
                             <div className="flex items-center justify-between w-full h-full p-2">
                                 <div className="flex center">
                                     <p className="text-sm font-semibold truncate">
-                                        {exercice.dataset.training.name}
+                                        {exercise.dataset.training.name}
                                     </p>
                                     <p className="text-xs font-light truncate ml-1">
-                                        ({exercice.dataset.training.size} bytes)
+                                        ({exercise.dataset.training.size} bytes)
                                     </p>
                                 </div>
                                 <AiFillCloseCircle 
@@ -110,15 +110,15 @@ export default function Datasets(props){
                         <input id="dropzone-model" type="file" accept=".csv,.txt" className="hidden" onChange={(e) => handleFileUpload(e, "test")} />
                     </label>
 
-                    {exercice.dataset.test && (
+                    {exercise.dataset.test && (
                         <div className="absolute bottom-4 right-4 w-64 h-16 bg-white dark:bg-gray-800 rounded-lg shadow-lg px-2">
                             <div className="flex items-center justify-between w-full h-full p-2">
                                 <div className="flex center">
                                     <p className="text-sm font-semibold truncate">
-                                        {exercice.dataset.test.name}
+                                        {exercise.dataset.test.name}
                                     </p>
                                     <p className="text-xs font-light truncate ml-1">
-                                        ({exercice.dataset.test.size} bytes)
+                                        ({exercise.dataset.test.size} bytes)
                                     </p>
                                 </div>
                                 <AiFillCloseCircle 

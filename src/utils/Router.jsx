@@ -9,11 +9,11 @@ import StudentAssignments from '../pages/Student/Assignments/Assignments.jsx'
 import StudentAssignment from '../pages/Student/Assignment/Assignment.jsx'
 import PublicExercise from '../pages/Student/PublicExercise/PublicExercise.jsx'
 import StudentViewClass from '../pages/Student/ViewClass/ViewClass.jsx'
-import PublicExercices from '../pages/PublicExercices/PublicExercices';
+import PublicExercises from '../pages/PublicExercises/PublicExercises';
 import ProfHome from '../pages/Professor/Classes/Classes.jsx'
 import ProfManageClass from '../pages/Professor/ManageClass/ManageClass.jsx'
-import ProfExercices from '../pages/Professor/Exercices/Exercices.jsx'
-import ProfManageExercice from '../pages/Professor/ManageExercice/ManageExercice.jsx'
+import ProfExercises from '../pages/Professor/Exercises/Exercises.jsx'
+import ProfManageExercise from '../pages/Professor/ManageExercise/ManageExercise.jsx'
 import ProfMetrics from '../pages/Professor/Metrics/Metrics.jsx'
 import Error from '../pages/Error/Error.jsx'
 
@@ -28,7 +28,7 @@ export default function Router(){
                 children: [
                     { index: true, element: <Navigate to="/student/home" /> },
                     { path: "home", element: <StudentHome /> },
-                    { path: "publicExercices", element: <PublicExercices user='student'/> },
+                    { path: "publicExercises", element: <PublicExercises user='student'/> },
                     { path: "assignments", element: <StudentAssignments /> },
                     { path: "assignments/:id", element: <StudentAssignment /> },
                     { path: "publicExercises/:id", element: <PublicExercise /> },
@@ -42,10 +42,10 @@ export default function Router(){
                     { path: "classes", element: <ProfHome /> },
                     { path: "classes/add", element: <ProfManageClass /> },
                     { path: "classes/:id", element: <ProfManageClass /> },
-                    { path: "publicExercices", element: <PublicExercices user='professor'/> },
-                    { path: "exercices", element: <ProfExercices /> },
-                    { path: "exercices/add", element: <ProfManageExercice />},
-                    { path: "exercices/:id", element: <ProfManageExercice />},
+                    { path: "publicExercises", element: <PublicExercises user='professor'/> },
+                    { path: "exercises", element: <ProfExercises /> },
+                    { path: "exercises/add", element: <ProfManageExercise />},
+                    { path: "exercises/:id", element: <ProfManageExercise />},
                     { path: "metrics", element: <ProfMetrics /> },
                 ]
             },

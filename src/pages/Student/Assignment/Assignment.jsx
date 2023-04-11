@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { useParams } from 'react-router-dom';
 import AssignmentTab from "./AssignmentTab";
-import { ExercicesAPI } from "../../../api/ExercicesAPI";
+import { ExercisesAPI } from "../../../api/ExercisesAPI";
 import Banner from "./Banner";
 import { Assignment as AssignmentInit } from "../../../model/Assignment";
 
@@ -15,7 +15,7 @@ export default function Assignment(){
 
     useEffect(() => {
         setLoading(true);
-        ExercicesAPI.getAssignmentById(assignmentId)
+        ExercisesAPI.getAssignmentById(assignmentId)
         .then((data) => {
             setAssignment(data);
         })

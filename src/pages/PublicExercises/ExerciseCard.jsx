@@ -3,7 +3,7 @@ import { Card, Button } from "flowbite-react";
 import { FaArrowRight } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
-export default function ExerciceCard(props){
+export default function ExerciseCard(props){
 
     const navigate = useNavigate();
     const { id, title, description, published } = props.exercise;

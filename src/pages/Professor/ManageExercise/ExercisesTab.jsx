@@ -6,9 +6,9 @@ import Evaluation from "./Evaluation"
 import Datasets from "./Datasets"
 import Results from "./Results"
 
-export default function ExercicesTab(props){
+export default function ExercisesTab(props){
 
-    const {handleChange, exercice, classes, metrics, loading} = props
+    const {handleChange, exercise, classes, metrics, loading} = props
 
     const renderLoading = () => {
         return (
@@ -23,33 +23,33 @@ export default function ExercicesTab(props){
             title: "Description",
             icon: BsFileRichtextFill, 
             content: loading ? renderLoading() : 
-            <Description handleChange={handleChange} exercice={exercice} classes={classes}/>
+            <Description handleChange={handleChange} exercise={exercise} classes={classes}/>
         },
         {
             title: "Evaluation Rules", 
             icon: BiCog, 
             content: loading ? renderLoading() : 
-            <Evaluation handleChange={handleChange} exercice={exercice} />
+            <Evaluation handleChange={handleChange} exercise={exercise} />
         },
         {
             title: "Datasets", 
             icon: BsDatabaseDown, 
             content: loading ? renderLoading() : 
-            <Datasets handleChange={handleChange} exercice={exercice} />
+            <Datasets handleChange={handleChange} exercise={exercise} />
         },
         {
             title: "Results", 
             icon: BsBarChartFill, 
             content: loading ? renderLoading() : 
-            <Results exercice={exercice} />
+            <Results exercise={exercise} />
         },
     ]
-    if (!exercice.id) tabs.pop() // remove results tab if exercice is not created yet
+    if (!exercise.id) tabs.pop() // remove results tab if exercise is not created yet
 
     return (
         <>
             <Tabs.Group
-                aria-label="Exercice Tabs"
+                aria-label="Exercise Tabs"
                 style="underline"
                 className="sticky top-0 z-10 bg-white dark:bg-gray-900"
             >

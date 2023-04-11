@@ -9,12 +9,12 @@ export default function Banner(){
             <div className='grid grid-cols-3'>
                 <div className='col-span-2'>
                     <div className='font-bold text-5xl mb-4'>
-                        Exercices
+                        Exercises
                     </div>
                     <div className='text-lg'>
-                        Exercices are used to evaluate the performance of your students.
+                        Exercises are used to evaluate the performance of your students.
                         <br />
-                        Here you can see or create your exercices, or see the available metrics.
+                        Here you can see or create your exercises, or see the available metrics.
                     </div>
                 </div>
 
@@ -27,9 +27,9 @@ export default function Banner(){
                             </Button>
                         </Link>
                         <div className='mt-4' />
-                        <Link to='/professor/exercices/add'>
+                        <Link to='/professor/exercises/add'>
                             <Button className='dark:bg-gray-800' color='light'>
-                                <div className='w-40 text-center'>Create a new exercice</div>
+                                <div className='w-40 text-center'>Create a new exercise</div>
                                 <FaPlusCircle />
                             </Button>
                         </Link>

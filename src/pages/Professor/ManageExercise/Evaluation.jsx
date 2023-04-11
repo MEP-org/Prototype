@@ -8,7 +8,7 @@ import MarkdownEditor from "../../../components/MarkdownEditor"
 
 export default function Evaluation(props){
 
-    const {exercice, handleChange} = props
+    const {exercise, handleChange} = props
     const [show, setShow] = useState(false)
 	const handleChangeDate = (selectedDate) => {
 		console.log(selectedDate)
@@ -17,7 +17,7 @@ export default function Evaluation(props){
 		setShow(state)
 	}
 
-    const value = exercice.evaluationRules || "# Evaluation rules"
+    const value = exercise.evaluationRules || "# Evaluation rules"
     const setValue = (value) => {
         handleChange({target: {name: "evaluationRules", value: value}})
     }
@@ -87,7 +87,7 @@ export default function Evaluation(props){
                         type="number" 
                         placeholder="Unlimited" 
                         onChange={props.handleChange} 
-                        value={props.exercice.attemptsLimit} 
+                        value={props.exercise.attemptsLimit} 
                     />
                 </div>
 

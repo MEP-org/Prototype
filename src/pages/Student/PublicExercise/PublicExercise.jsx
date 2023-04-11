@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react"
 import { useParams } from 'react-router-dom';
 import PublicExerciseTab from "./PublicExerciseTab";
-import { ExercicesAPI } from "../../../api/ExercicesAPI";
+import { ExercisesAPI } from "../../../api/ExercisesAPI";
 import Banner from "./Banner";
-import { PublicExercice as PublicExerciseInit } from "../../../model/PublicExercise";
+import { PublicExercise as PublicExerciseInit } from "../../../model/PublicExercise";
 
 
 export default function PublicExercise(){
@@ -15,7 +15,7 @@ export default function PublicExercise(){
 
     useEffect(() => {
         setLoading(true);
-        ExercicesAPI.getPublicExerciseById(exerciseId)
+        ExercisesAPI.getPublicExerciseById(exerciseId)
         .then((data) => {
             setPublicExercise(data);
         })

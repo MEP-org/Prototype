@@ -1,5 +1,5 @@
 
-export const ProfExercice = {
+export const ProfExercise = {
     id: '',
     title: '',
     subtitle: '',

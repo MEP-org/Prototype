@@ -4,8 +4,8 @@ import {BiHelpCircle} from "react-icons/bi"
 
 export default function Description(props){
 
-    const {handleChange, exercice, classes} = props
-    const value = exercice.description || "# Description"
+    const {handleChange, exercise, classes} = props
+    const value = exercise.description || "# Description"
     const setValue = (value) => {
         handleChange({target: {name: "description", value: value}})
     }
@@ -18,7 +18,7 @@ export default function Description(props){
                     <Label>Title</Label>
                     <TextInput
                         name="title"
-                        value={exercice.title}
+                        value={exercise.title}
                         onChange={handleChange}
                         placeholder="Title"
                         className="w-full mt-2"
@@ -33,8 +33,8 @@ export default function Description(props){
                         onChange={handleChange}
                         className="w-full mt-2"
                     >
-                        {exercice.id ? 
-                            <option value={exercice.studentClass.id}>{exercice.studentClass.name}</option> 
+                        {exercise.id ? 
+                            <option value={exercise.studentClass.id}>{exercise.studentClass.name}</option> 
                             : <option value="">Select a class</option>
                         }
                         {classes.map((item) => {
@@ -49,7 +49,7 @@ export default function Description(props){
                         <Checkbox 
                             id="visible" 
                             name="visible" 
-                            value={exercice.visible} 
+                            value={exercise.visible} 
                             onChange={handleChange} 
                         />
                         <Tooltip
@@ -67,7 +67,7 @@ export default function Description(props){
                 <Label>Sub Title</Label>
                 <Textarea 
                     name="subtitle"
-                    value={exercice.subtitle}
+                    value={exercise.subtitle}
                     onChange={handleChange}
                     placeholder="Short description"
                     className="w-full mt-2"

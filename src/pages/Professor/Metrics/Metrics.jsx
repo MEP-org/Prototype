@@ -36,7 +36,7 @@ export default function Metrics(){
                 </div>
 
                 <Tabs.Group
-                    aria-label="Exercice Tabs"
+                    aria-label="Exercise Tabs"
                     style="underline"
                     className="sticky top-0 z-10 bg-white dark:bg-gray-900"
                 >

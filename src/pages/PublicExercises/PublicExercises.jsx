@@ -1,11 +1,11 @@
 import {useState, useEffect} from 'react';
-import {ExercicesAPI} from "../../api/ExercicesAPI";
+import {ExercisesAPI} from "../../api/ExercisesAPI";
 import Banner from './Banner';
 import Filters from './Filters';
 import Results from './Results';
 
 
-export default function PublicExercices(props){
+export default function PublicExercises(props){
 
     const [filter, setFilter] = useState({
         'title': '',
@@ -20,7 +20,7 @@ export default function PublicExercices(props){
 
     useEffect(() => {
         setLoading(true);
-        ExercicesAPI.getPublic()
+        ExercisesAPI.getPublic()
         .then((data) => {
             setExercises(data);
         })

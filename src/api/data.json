@@ -355,7 +355,7 @@
         }
     ],
 
-    "profExercices":[
+    "profExercises":[
         {
             "id": 1,
             "title": "Titanic - Machine Learning from Disaster",

@@ -1,10 +1,10 @@
-import { assignment, student_assignments, public_exercise, profExercices, public_exercises } from './data.json';
+import { assignment, student_assignments, public_exercise, profExercises, public_exercises } from './data.json';
 
-export const ExercicesAPI = {
+export const ExercisesAPI = {
     getByProf: async function(profId) {
         // add a delay to simulate a network request
         await new Promise((resolve) => setTimeout(resolve, 1000));
-        return profExercices;
+        return profExercises;
     },
     getByStudent: async function(studentId) {
         // add a delay to simulate a network request
@@ -24,17 +24,17 @@ export const ExercicesAPI = {
         return assignment;
     },
 
-    getPublicExerciseById: async function(exerciceId) {
+    getPublicExerciseById: async function(exerciseId) {
         // add a delay to simulate a network request
         await new Promise((resolve) => setTimeout(resolve, 1000));
         return public_exercise;
     },
 
-    getProfExerciceById: async function(profId, exerciceId) {
+    getProfExerciseById: async function(profId, exerciseId) {
         // add a delay to simulate a network request
         await new Promise((resolve) => setTimeout(resolve, 1000));
         return {
-            "exercice": undefined,
+            "exercise": undefined,
             "classes": []
         }      
     },  

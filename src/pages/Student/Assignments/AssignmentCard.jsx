@@ -5,7 +5,7 @@ import { Card, Button } from 'flowbite-react';
 export default function AssignmentCard(props){
 
     const navigate = useNavigate();
-    const {title, description, published, deadline, studentClass} = props.exercice;
+    const {title, description, published, deadline, studentClass} = props.exercise;
 
     return (
         <>

@@ -86,11 +86,11 @@ export default function Banner({classData, setClassData}) {
                     </div>
                     <div className="grid grid-cols-3 gap-x-10 gap-y-4">
                         <Button className='dark:bg-gray-800' color='light'>
-                            <div className='w-40 text-center'>See exercices</div>
+                            <div className='w-40 text-center'>See exercises</div>
                             <FaEye />
                         </Button>
                         <Button className='dark:bg-gray-800' color='light'>
-                            <div className='w-40 text-center'>Add exercice</div>
+                            <div className='w-40 text-center'>Add exercise</div>
                             <FaPlusCircle />
                         </Button>
                         <Button className='dark:bg-gray-800' color='light'>

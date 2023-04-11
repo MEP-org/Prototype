@@ -57,16 +57,16 @@ export default function MyNavbar(props){
                     Classes
                 </Navbar.Link>
                 <Navbar.Link className='text-base cursor-pointer' 
-                    active={active === 'publicExercices'}
-                    onClick={() => handleNav('publicExercices')}
+                    active={active === 'publicExercises'}
+                    onClick={() => handleNav('publicExercises')}
                 >
-                    Public Exercices
+                    Public Exercises
                 </Navbar.Link>
                 <Navbar.Link className='text-base cursor-pointer' 
-                    active={active === 'exercices'}
-                    onClick={() => handleNav('exercices')}
+                    active={active === 'exercises'}
+                    onClick={() => handleNav('exercises')}
                 >
-                    Exercices
+                    Exercises
                 </Navbar.Link>
             </>
         )
@@ -82,10 +82,10 @@ export default function MyNavbar(props){
                     Home
                 </Navbar.Link>
                 <Navbar.Link className='text-base cursor-pointer' 
-                    active={active === 'publicExercices'}
-                    onClick={() => handleNav('publicExercices')}
+                    active={active === 'publicExercises'}
+                    onClick={() => handleNav('publicExercises')}
                 >
-                    Public Exercices
+                    Public Exercises
                 </Navbar.Link>
                 <Navbar.Link className='text-base cursor-pointer' 
                     active={active === 'assignments'}

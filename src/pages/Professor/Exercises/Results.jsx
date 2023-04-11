@@ -1,10 +1,10 @@
 import { Spinner } from 'flowbite-react';
 import { FaFileAlt } from 'react-icons/fa';
-import ExerciceCard from './ExerciceCard';
+import ExerciseCard from './ExerciseCard';
 
 export default function Results(props){
 
-    const {exercices, loading, filter} = props;
+    const {exercises, loading, filter} = props;
 
     const renderLoading = () => {
         return (
@@ -24,24 +24,24 @@ export default function Results(props){
         )
     }
 
-    const exercicesFilter = (exercice) => {
+    const exercisesFilter = (exercise) => {
         // TODO: Implement filter
-        console.log(filter, exercice);
+        console.log(filter, exercise);
         return true;
     }   
 
-    const renderExercices = () => {
-        let filteredExercices = exercices.filter(exercicesFilter);
-        if(filteredExercices.length === 0){
+    const renderExercises = () => {
+        let filteredExercises = exercises.filter(exercisesFilter);
+        if(filteredExercises.length === 0){
             return noResults();
         }
         // TODO: Implement sort
         return (
             <>
                 <div>
-                    {filteredExercices.map((exercice) => {
+                    {filteredExercises.map((exercise) => {
                         return (
-                            <ExerciceCard exercice={exercice} key={exercice.id} />
+                            <ExerciseCard exercise={exercise} key={exercise.id} />
                         )
                     })}
                 </div>
@@ -54,10 +54,10 @@ export default function Results(props){
             <div>
                 <div className='font-semibold text-3xl mb-10 flex items-center'>
                     <FaFileAlt className='mr-2' size={25} />
-                    Exercices
+                    Exercises
                 </div>
             </div>
-            {loading ? renderLoading() : renderExercices()}
+            {loading ? renderLoading() : renderExercises()}
         </>
     )
 }

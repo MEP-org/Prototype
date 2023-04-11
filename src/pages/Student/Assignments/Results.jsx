@@ -4,7 +4,7 @@ import AssignmentCard from './AssignmentCard';
 
 export default function Results(props){
 
-    const {exercices, loading, filter} = props;
+    const {exercises, loading, filter} = props;
 
     const renderLoading = () => {
         return (
@@ -24,15 +24,15 @@ export default function Results(props){
         )
     }
 
-    const exercicesFilter = (exercice) => {
+    const exercisesFilter = (exercise) => {
         // TODO: Implement filter
-        console.log(filter, exercice);
-        return exercice.id >= 1;
+        console.log(filter, exercise);
+        return exercise.id >= 1;
     }   
 
-    const renderExercices = () => {
-        let filteredExercices = exercices.filter(exercicesFilter);
-        if(filteredExercices.length === 0){
+    const renderExercises = () => {
+        let filteredExercises = exercises.filter(exercisesFilter);
+        if(filteredExercises.length === 0){
             return noResults();
         }
         // TODO: Implement sort
@@ -40,9 +40,9 @@ export default function Results(props){
             <>
                 <div>
                     <div className='grid lg:grid-cols-2 gap-4'>
-                        {filteredExercices.map((exercice) => {
+                        {filteredExercises.map((exercise) => {
                             return (
-                                <AssignmentCard exercice={exercice} key={exercice.id} />
+                                <AssignmentCard exercise={exercise} key={exercise.id} />
                             )
                         })}
                     </div>
@@ -59,7 +59,7 @@ export default function Results(props){
                     Assignments
                 </div>
             </div>
-            {loading ? renderLoading() : renderExercices()}
+            {loading ? renderLoading() : renderExercises()}
         </>
     )
 }
