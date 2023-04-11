@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { useParams } from 'react-router-dom';
-import AssignmentTab from "./AssignmentTab";
+import PublicExerciseTab from "./PublicExerciseTab";
 import { ExercicesAPI } from "../../../api/ExercicesAPI";
 import Banner from "./Banner";
 import { PublicExercice as PublicExerciseInit } from "../../../model/PublicExercise";
@@ -15,9 +15,9 @@ export default function PublicExercise(){
 
     useEffect(() => {
         setLoading(true);
-        ExercicesAPI.getAssignmentById(exerciseId)
+        ExercicesAPI.getPublicExerciseById(exerciseId)
         .then((data) => {
-            setAssignment(data);
+            setPublicExercise(data);
         })
         .finally(() => {
             setLoading(false);
@@ -28,8 +28,8 @@ export default function PublicExercise(){
     return (
         <>
             <div className='w-full container mt-8'>
-                <Banner assignment={assignment} loading={loading} />
-                <AssignmentTab assignment={assignment} loading={loading} />
+                <Banner exercise={publicExercise} loading={loading} />
+                <PublicExerciseTab exercise={publicExercise} loading={loading} />
             </div>
         </>
     )
