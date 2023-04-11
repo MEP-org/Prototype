@@ -3,19 +3,19 @@ import { useParams } from 'react-router-dom';
 import AssignmentTab from "./AssignmentTab";
 import { ExercicesAPI } from "../../../api/ExercicesAPI";
 import Banner from "./Banner";
-import { Assignment as AssignmentInit } from "../../../model/Assignment";
+import { PublicExercice as PublicExerciseInit } from "../../../model/PublicExercise";
 
 
-export default function Assignment(){
+export default function PublicExercise(){
 
-    const { assignmentId } = useParams();
+    const { exerciseId } = useParams();
     const [loading, setLoading] = useState(false);
-    const [assignment, setAssignment] = useState(AssignmentInit);
+    const [publicExercise, setPublicExercise] = useState(PublicExerciseInit);
 
 
     useEffect(() => {
         setLoading(true);
-        ExercicesAPI.getAssignmentById(assignmentId)
+        ExercicesAPI.getAssignmentById(exerciseId)
         .then((data) => {
             setAssignment(data);
         })
