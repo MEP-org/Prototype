@@ -15,8 +15,7 @@ export default function Assignment(){
 
     useEffect(() => {
         setLoading(true);
-        const studentID = 100001;
-        ExercicesAPI.getAssignmentById(studentID)
+        ExercicesAPI.getAssignmentById(assignmentId)
         .then((data) => {
             setAssignment(data);
         })

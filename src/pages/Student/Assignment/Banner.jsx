@@ -53,7 +53,7 @@ export default function Description(props) {
                         <div className='lg:text-right'>
                             <span className="inline-block text-xs font-light pr-1">Published:</span>
                             <span className="inline-block text-xs font-bold">
-                                {assignment.deliveryDeadline}
+                                {assignment.publishingDate}
                             </span>
                         </div>
 

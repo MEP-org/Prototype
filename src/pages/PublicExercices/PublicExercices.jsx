@@ -16,13 +16,13 @@ export default function PublicExercices(props){
     });
 
     const [loading, setLoading] = useState(false);
-    const [exercices, setExercices] = useState([]);
+    const [exercises, setExercises] = useState([]);
 
     useEffect(() => {
         setLoading(true);
         ExercicesAPI.getPublic()
         .then((data) => {
-            setExercices(data);
+            setExercises(data);
         })
         .finally(() => {
             setLoading(false);
@@ -38,7 +38,7 @@ export default function PublicExercices(props){
                 <div className='mb-10' />
                 <Filters filter={filter} setFilter={setFilter} profs={profs}/>
                 <div className='mb-10' />
-                <Results exercices={exercices} loading={loading} />
+                <Results exercises={exercises} loading={loading} />
             </div>
         </>
     )

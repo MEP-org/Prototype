@@ -10,7 +10,7 @@ import Evaluation from "./Evaluation";
 
 export default function AssignmentTab(props){
 
-    const { assignment, handleChange, loading } = props;
+    const { assignment, loading } = props;
 
     return (
         <>
@@ -56,7 +56,7 @@ export default function AssignmentTab(props){
                     title="Submission"
                     icon={BsFillCloudUploadFill}
                 >
-                    <Submissions submissions={assignment.submissions} handleChange={handleChange} loading={loading} />
+                    <Submissions submissions={assignment.submissions} loading={loading} />
                 </Tabs.Item>
 
 

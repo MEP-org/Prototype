@@ -7,6 +7,7 @@ import SignIn from '../pages/SignIn/SignIn';
 import StudentHome from '../pages/Student/Home/Home.jsx'
 import StudentAssignments from '../pages/Student/Assignments/Assignments.jsx'
 import StudentAssignment from '../pages/Student/Assignment/Assignment.jsx'
+import PublicExercise from '../pages/Student/PublicExercise/PublicExercise.jsx'
 import StudentViewClass from '../pages/Student/ViewClass/ViewClass.jsx'
 import PublicExercices from '../pages/PublicExercices/PublicExercices';
 import ProfHome from '../pages/Professor/Classes/Classes.jsx'
@@ -30,6 +31,7 @@ export default function Router(){
                     { path: "publicExercices", element: <PublicExercices user='student'/> },
                     { path: "assignments", element: <StudentAssignments /> },
                     { path: "assignments/:id", element: <StudentAssignment /> },
+                    { path: "publicExercises/:id", element: <PublicExercise /> },
                     { path: "viewClass", element: <StudentViewClass /> },
                 ]
             },
