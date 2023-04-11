@@ -1,5 +1,8 @@
 import{ useState } from 'react'
 import { Label, TextInput, Dropdown, Checkbox } from 'flowbite-react'
+import Select from 'react-select';
+import makeAnimated from 'react-select/animated';
+
 import DatePicker from "tailwind-datepicker-react"
 import MarkdownEditor from "../../../components/MarkdownEditor"
 
@@ -18,6 +21,42 @@ export default function Evaluation(props){
     const setValue = (value) => {
         handleChange({target: {name: "evaluationRules", value: value}})
     }
+
+    const animatedComponents = makeAnimated();
+    const metricsTemp= [
+        { value: 'accuracy', label: 'Accuracy' },
+        { value: 'precision', label: 'Precision' },
+        { value: 'recall', label: 'Recall' },
+        { value: 'f1', label: 'F1' },
+        { value: 'roc_auc', label: 'ROC AUC' },
+    ]
+
+    const customClassNames = {
+        control: (state) => {
+            return 'p-[2px] !bg-gray-50 dark:!bg-gray-700 dark:border-gray-600 !rounded-lg hover:!border-blue-500'
+        },
+        option: (state) => {
+            return 'text-gray-900 dark:text-white' + (state.isFocused ? '!bg-blue-500 dark:!bg-blue-500' : '')
+        },
+        menu: (state) => {
+            return 'bg-gray-50 dark:bg-gray-700 dark:text-white'
+        },
+        multiValue: (state) => {
+            return '!bg-blue-500'
+        },
+        multiValueLabel: (state) => {
+            return '!text-white'
+        },
+        multiValueRemove: (state) => {
+            return '!text-white hover:!bg-red-500'
+        },
+        input: (state) => {
+            // remove the default border
+            return 'dark:!text-white'
+        }
+
+    };
+      
 
 	return (
         <>
@@ -52,34 +91,19 @@ export default function Evaluation(props){
                     />
                 </div>
 
-                <div className="w-96">
+                <div className="flex-1">
                     <Label>Metrics</Label>
                     <div className='mt-2'/>
-                    <Dropdown
-                        label='Choose metrics'
-                        dismissOnClick={false}
-                    >
-                        <Dropdown.Item>
-                            <Checkbox
-                                id="accuracy"
-                                name="accuracy"
-                                value={false}
-                                onChange={() => {}}
-                                className="mr-2"
-                            />
-                            <Label htmlFor="accuracy" className="cursor-pointer">Accuracy</Label>
-                        </Dropdown.Item>
-                        <Dropdown.Item>
-                            <Checkbox
-                                id="precision"
-                                name="precision"
-                                value={false}
-                                onChange={() => {}}
-                                className="mr-2"
-                            />
-                            <Label htmlFor="precision" className="cursor-pointer">Precision</Label>
-                        </Dropdown.Item>
-                    </Dropdown>
+                    <Select
+                        closeMenuOnSelect={false}
+                        components={animatedComponents}
+                        defaultValue={[]}
+                        isMulti
+                        options={metricsTemp}
+                        classNames={customClassNames}
+                        className='z-20'
+                        isSearchable={true}                        
+                    />
                 </div>
 
             </div>
