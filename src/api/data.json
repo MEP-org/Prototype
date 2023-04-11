@@ -307,6 +307,24 @@
 
     },
 
+
+    "public_exercise": {
+        "id": 1,
+        "title": "Key Indicators of Heart Disease ",
+        "subtitle": "2022 annual CDC survey data of 400k adults related to their health status.",
+        "publishingDate": "2023-04-01",
+        "visible": true,
+        "description": "# Description \nThis is the description of the assignment",
+        "datasets": {
+            "train": {
+                "name": "train.csv",
+                "size": 145,
+                "url": "https://sample-videos.com/csv/Sample-Spreadsheet-10-rows.csv",
+                "uploadDate": "2023-04-01"
+            }
+        }
+    },
+
     "metrics" : [
         {
             "id": 1,
@@ -382,6 +400,31 @@
             "maxAnswers": 10,
             "published": "2023-04-01",
             "deadline": "2023-05-01"
+        }
+    ],
+
+
+    "public_exercises":[
+        {
+            "id": 1,
+            "title": "Key Indicators of Heart Disease",
+            "description": "2022 annual CDC survey data of 400k adults related to their health status.",
+            "visible": true,
+            "published": "2023-04-01"
+        },
+        {
+            "id": 2,
+            "title": "Countries GDP 2012 to 2021",
+            "description": "Countries GDP 2012 to 2021",
+            "visible": true,
+            "published": "2023-04-01"
+        },
+        {
+            "id": 3,
+            "title": "Significant Earthquakes, 1900-Present",
+            "description": "Comprehensive Earthquake Dataset, Magnitude 5+ Since 1900 - Updated Regularly",
+            "visible": true,
+            "published": "2023-04-01"
         }
     ]
 }

@@ -1,10 +1,10 @@
 import { Spinner } from 'flowbite-react';
 import { FaFileAlt } from 'react-icons/fa';
-import ExerciceCard from './ExerciceCard';
+import ExerciseCard from './ExerciseCard';
 
 export default function Results(props){
 
-    const {exercices, loading} = props;
+    const {exercises, loading} = props;
 
     const renderLoading = () => {
         return (
@@ -24,16 +24,16 @@ export default function Results(props){
         )
     }
 
-    const renderExercices = () => {
-        if(exercices.length === 0){
+    const renderExercises = () => {
+        if(exercises.length === 0){
             return noResults();
         }
         return (
             <>
-                <div>
-                    {exercices.map((exercice) => {
+                <div className='grid lg:grid-cols-2 gap-4'>
+                    {exercises.map((exercise) => {
                         return (
-                            <ExerciceCard exercice={exercice} key={exercice.id} />
+                            <ExerciseCard exercise={exercise} key={exercise.id} />
                         )
                     })}
                 </div>
@@ -47,10 +47,10 @@ export default function Results(props){
             <div >
                 <div className='font-semibold text-3xl mb-10 flex items-center'>
                     <FaFileAlt className='mr-2' size={25} />
-                    Public Exercices
+                    Public Exercises
                 </div>
             </div>
-            {loading ? renderLoading() : renderExercices()}
+            {loading ? renderLoading() : renderExercises()}
         </>
     )
 }
