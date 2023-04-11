@@ -150,7 +150,7 @@
         {
             "id": 1,
             "title": "Titanic - Machine Learning from Disaster",
-            "description": "Subtitle orem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit",
+            "description": "This is the legendary Titanic ML competition - the best, first challenge for you to dive into ML competitions and familiarize yourself with how the Kaggle platform works.",
             "published": "2023-04-01",
             "deadline": "2023-05-01",
             "studentClass": {
@@ -186,7 +186,7 @@
     "assignment": {
         "id": 1,
         "title": "Titanic - Machine Learning from Disaster",
-        "subtitle": "The sinking of the RMS Titanic is one of the most infamous shipwrecks in history. On April 15, 1912, during her maiden voyage, the Titanic sank after colliding with an iceberg, killing 1502 out of 2224 passengers and crew. This sensational tragedy shocked the international community and led to better safety regulations for ships.",
+        "subtitle": "This is the legendary Titanic ML competition - the best, first challenge for you to dive into ML competitions and familiarize yourself with how the Kaggle platform works.",
         "publishingDate": "2023-04-01",
         "deliveryDeadline": "2023-05-01",
         "visible": false,
@@ -197,9 +197,9 @@
             "name": "ML-C1"
         },
 
-        "description": "# Description \nThis is the description of the assignment",
+        "description": "# Description\n![image](https://cdn.discordapp.com/attachments/905851950384414790/1095485286118592622/Screenshot_2023-04-12_at_00.07.16.png)\n<br>\n\nThis is the legendary Titanic ML competition - the best, first challenge for you to dive into ML competitions and familiarize yourself with how the Kaggle platform works.\nThe competition is simple: use machine learning to create a model that predicts which passengers survived the Titanic shipwreck.\nRead on or watch the video below to explore more details. Once you are ready to start competing, click on the Join Competition button to create an account and gain access to the competition data. Then check out Alexis Cook's Titanic Tutorial that walks you through step by step how to make your first submission!\n\n<br>\n\n## The Challenge\nThe sinking of the Titanic is one of the most infamous shipwrecks in history.\nOn April 15, 1912, during her maiden voyage, the widely considered “unsinkable” RMS Titanic sank after colliding with an iceberg. Unfortunately, there weren't enough lifeboats for everyone onboard, resulting in the death of 1502 out of 2224 passengers and crew.\nWhile there was some element of luck involved in surviving, it seems some groups of people were more likely to survive than others.\nIn this challenge, we ask you to build a predictive model that answers the question: “what sorts of people were more likely to survive?” using passenger data (ie name, age, gender, socio-economic class, etc).",
 
-        "evaluationRules": "# Evaluation Rules \n 1. Rule one\n2. Rule two",
+        "evaluationRules": "# Evaluation Rules\n\n## Goal\nIt is your job to predict if a passenger survived the sinking of the Titanic or not.\nFor each in the test set, you must predict a 0 or 1 value for the variable.\n\n## Submission File Format\nYou should submit a csv file with exactly 418 entries plus a header row. Your submission will show an error if you have extra columns (beyond PassengerId and Survived) or rows.",
 
         "datasets": {
             "train": {
@@ -314,7 +314,7 @@
         "subtitle": "2022 annual CDC survey data of 400k adults related to their health status.",
         "publishingDate": "2023-04-01",
         "visible": true,
-        "description": "# Description \nThis is the description of the assignment",
+        "description": "# Description\n![image](https://cdn.discordapp.com/attachments/905851950384414790/1095488037644947506/Screenshot_2023-04-12_at_00.18.14.png)\n\n## What topic does the dataset cover?\nAccording to the CDC, heart disease is one of the leading causes of death for people of most races in the US (African Americans, American Indians and Alaska Natives, and white people). About half of all Americans (47%) have at least 1 of 3 key risk factors for heart disease: high blood pressure, high cholesterol, and smoking. Other key indicator include diabetic status, obesity (high BMI), not getting enough physical activity or drinking too much alcohol. Detecting and preventing the factors that have the greatest impact on heart disease is very important in healthcare. Computational developments, in turn, allow the application of machine learning methods to detect 'patterns' from the data that can predict a patient's condition.\n\n## Where did the dataset come from and what treatments did it undergo?\nOriginally, the dataset come from the CDC and is a major part of the Behavioral Risk Factor Surveillance System (BRFSS), which conducts annual telephone surveys to gather data on the health status of U.S. residents. As the CDC describes: Established in 1984 with 15 states, BRFSS now collects data in all 50 states as well as the District of Columbia and three U.S. territories.",
         "datasets": {
             "train": {
                 "name": "train.csv",
