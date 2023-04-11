@@ -31,7 +31,7 @@ export default function Router(){
                     { path: "publicExercices", element: <PublicExercices user='student'/> },
                     { path: "assignments", element: <StudentAssignments /> },
                     { path: "assignments/:id", element: <StudentAssignment /> },
-                    { path: "publicExercise/:id", element: <PublicExercise /> },
+                    { path: "publicExercises/:id", element: <PublicExercise /> },
                     { path: "viewClass", element: <StudentViewClass /> },
                 ]
             },
