@@ -9,7 +9,7 @@ export default function ExerciseCard(props) {
     return ( 
         <>
 
-            <Card className='mb-4'>
+            <Card className='mb-4 border-l-8 !border-l-blue-500'>
                 <div className='grid grid-cols-12'>
                     <div className='lg:col-span-10 col-span-12'>
                         <p className="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">

@@ -10,7 +10,7 @@ export default function AssignmentCard(props){
     return (
         <>
 
-        <Card>
+        <Card className="border-l-8 !border-l-blue-500">
             <div className="overflow-auto flex flex-col h-64">
                 <div>
                     <p className="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
