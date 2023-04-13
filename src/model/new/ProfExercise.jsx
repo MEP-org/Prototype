@@ -1,24 +1,16 @@
-
-export const Exercise = {
+export const ProfExercise = {
     id: '',
     title: '',
     subtitle: '',
     publishDate: '',
     deadlineDate: '',
     attemptsLimit: '',
-    isPublic: '',         // true or false
-    author: {
-        // foreign key
-        id: '',
-        name: '',
-    },
+    isPublic: '',
     studentClass: {
-        // foreign key
         id: '',
         name: '',
     },
     metrics: [
-        // foreign keys
         // {
         //     id: '',
         //     name: '',
@@ -28,18 +20,26 @@ export const Exercise = {
     descriptionMD: '',
     evaluationMD: '',
     trainingDataset: {
-        // foreign key
         fileName: '',
         size: '',
         url: '',
         uploadDate: ''
     }, 
     testDataset: {
-        // foreign key (separado em X e y)
         fileName: '',
         size: '',
         url: '',
         uploadDate: ''
     },
-    // results é adicionado à parte dependendo do pedido 
+    results: [
+        // student
+        // {
+        //     id: '',
+        //     name: '',
+        //     metricsResults: [
+        //         // values for each metric in the same order as the metrics array
+        //     ],
+        //     codeUrl: '',
+        // }
+    ]
 }
