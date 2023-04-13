@@ -1,4 +1,4 @@
-export const ProfExercise = {
+export const StudentAssignment = {
     id: '',
     title: '',
     subtitle: '',
@@ -15,6 +15,7 @@ export const ProfExercise = {
         //     id: '',
         //     name: '',
         //     description: '',
+        //     value: '', // my result for this metric
         // }
     ],
     descriptionMD: '',
@@ -26,7 +27,7 @@ export const ProfExercise = {
         uploadDate: ''
     }, 
     testDataset: {
-        // X and y columns
+        // only the y column
         fileName: '',
         size: '',
         url: '',
@@ -40,7 +41,18 @@ export const ProfExercise = {
         //     metricsResults: [
         //         // values for each metric in the same order as the metrics array
         //     ],
-        //     codeUrl: '',
         // }
-    ]
+    ],
+    codeSubmission: {
+        fileName: '',
+        size: '',
+        url: '',
+        uploadDate: ''
+    },
+    resultsSubmission: {
+        fileName: '',
+        size: '',
+        url: '',
+        uploadDate: ''
+    },
 }
