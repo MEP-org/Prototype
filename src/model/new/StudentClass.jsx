@@ -1,10 +1,7 @@
 export const ProfClass = {
     id: '',
     name: '',
-    prof: {
-        id: '',
-        name: '',
-    },
+    prof: '',
     imgUrl: '',
     students: [
         // {
