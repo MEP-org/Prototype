@@ -10,7 +10,13 @@ export default function StudentsTable({classData, setClassData}){
         e.preventDefault();
         setClassData({
             ...classData,
-            students: [...classData.students, student]
+            students: [...classData.students, {
+                id: student.nMec,
+                user : {
+                    nMec: student.nMec,
+                    name: student.name
+                }
+            }]
         })
         setStudent({nMec: '', name: ''})
 
@@ -82,12 +88,12 @@ export default function StudentsTable({classData, setClassData}){
                     </Table.Head>
                     <Table.Body>
                         {classData.students.map((student) => (
-                            <Table.Row key={student.nMec}>
+                            <Table.Row key={student.id}>
                                 <Table.Cell>
-                                    {student.nMec}
+                                    {student.user.nmec}
                                 </Table.Cell>
                                 <Table.Cell>
-                                    {student.name}
+                                    {student.user.name}
                                 </Table.Cell>
                                 <Table.Cell className='cursor-pointer hover:text-blue-500' onClick={() => handleEditStudent(student.nMec, student.name)}>
                                     <FaUserEdit className="mx-auto" />

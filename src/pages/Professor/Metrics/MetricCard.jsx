@@ -8,7 +8,7 @@ export default function MetricCard({ metric }) {
                 <div className="flex flex-col justify-between h-full">
                     <div className="flex flex-col">
                         <div className="font-bold text-2xl mb-2">
-                            {metric.name}
+                            {metric.title}
                         </div>
                         <div className="text-lg mb-2 text-justify">
                             {metric.description}
@@ -16,7 +16,7 @@ export default function MetricCard({ metric }) {
                     </div>
                     <div className="flex justify-end items-end">
                         <div className="text-sm text-gray-500">
-                            Metric added by: <span className="font-bold">{metric.author.name}</span>
+                            Metric added by: <span className="font-bold">{metric.created_by || "MepML"}</span>
                         </div>
                     </div>
                 </div>

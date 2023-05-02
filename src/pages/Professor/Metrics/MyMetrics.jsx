@@ -2,9 +2,7 @@ import MetricCard from "./MetricCard";
 
 export default function MyMetrics({metrics}) {
 
-    const myId = 1;
-
-    const myMetrics = metrics.filter(metric => metric.author.id === myId);
+    const myMetrics = [...metrics.my_metrics];
 
     return (
         <>

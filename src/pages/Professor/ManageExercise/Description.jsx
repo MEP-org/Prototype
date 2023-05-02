@@ -34,7 +34,7 @@ export default function Description(props){
                         className="w-full mt-2"
                     >
                         {exercise.id ? 
-                            <option value={exercise.studentClass.id}>{exercise.studentClass.name}</option> 
+                            <option value={exercise.students_class.id}>{exercise.students_class.name}</option> 
                             : <option value="">Select a class</option>
                         }
                         {classes.map((item) => {
@@ -49,7 +49,7 @@ export default function Description(props){
                         <Checkbox 
                             id="visible" 
                             name="visible" 
-                            value={exercise.visible} 
+                            value={exercise.visibility} 
                             onChange={handleChange} 
                         />
                         <Tooltip

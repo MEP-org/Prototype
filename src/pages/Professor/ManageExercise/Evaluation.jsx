@@ -8,7 +8,7 @@ import MarkdownEditor from "../../../components/MarkdownEditor"
 
 export default function Evaluation(props){
 
-    const {exercise, handleChange} = props
+    const {exercise, handleChange, metrics} = props
     const [show, setShow] = useState(false)
 	const handleChangeDate = (selectedDate) => {
 		console.log(selectedDate)

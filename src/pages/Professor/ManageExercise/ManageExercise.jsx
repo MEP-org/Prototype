@@ -1,28 +1,32 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
-import { ExercisesAPI } from "../../../api/ExercisesAPI"
-import { ClassesAPI } from "../../../api/ClassesAPI"
 
+import { ProfessorAPI } from "../../../api/ProfessorAPI"
 import Banner from "./Banner"
 import ExercisesTab from "./ExercisesTab"
 
 export default function ManageExercise(props){
+    const profId = 1
 
     const id = useParams().id || undefined
     const [loading, setLoading] = useState(false)
     const [classes, setClasses] = useState([])
     const [metrics, setMetrics] = useState([])
     const [exercise, setExercise] = useState({
-        id: id,
-        title: undefined,
-        subtitle: undefined,
-        publishingDate: undefined,
-        attemptsLimit: undefined,
-        visible: false,
-        studentClass: {id: undefined, name: undefined},
-        description: undefined,
-        evaluationRules: undefined,
-        dataset: {training: undefined, test: undefined},
+        id: undefined,
+        title: '',
+        subtitle: '',
+        publish_date: '',
+        description: '',
+        evaluation: '',
+        deadline: '',
+        students_class: '',
+        limit_of_attempts: '',
+        visibility: false,
+        dataset: {
+            training: undefined,
+            test: undefined
+        },
         results: []
     })
 
@@ -33,26 +37,12 @@ export default function ManageExercise(props){
 
     useEffect(() => {
         setLoading(true)
-        const profId = 1
-        if(id) {
-            ExercisesAPI.getProfExerciseById(profId, id)
-            .then((data) => {
-                // setExercise(data.exercise)
-                setClasses(data.classes)
-            })
-            .finally(() => {
-                setLoading(false)
-            })
-        }
-        else {
-            ClassesAPI.getByProfessor(profId)
-            .then((data) => {
-                setClasses(data)
-            })
-            .finally(() => {
-                setLoading(false)
-            })
-        }
+        ProfessorAPI.getExercise(profId, id).then((data) => {
+            if (id !== undefined) setExercise(data.exercise)
+            setMetrics(data.metrics)
+            setClasses([])
+        })
+        .finally(() => setLoading(false))
     }, [id])
 
 

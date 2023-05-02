@@ -3,13 +3,7 @@ import { FaSearch } from 'react-icons/fa'
 
 export default function Filters(props){
 
-    const {filter, setFilter, exercises} = props;
-    const classes = exercises.map((exercise) => {
-        return {
-            'id': exercise.studentClass.id,
-            'name': exercise.studentClass.name
-        }
-    });
+    const {filter, setFilter, assignments, classes} = props;
 
     const handleFilter = (e, key) => {
         console.log(e.target.value);

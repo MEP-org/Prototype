@@ -4,7 +4,7 @@ import AssignmentCard from './AssignmentCard';
 
 export default function Results(props){
 
-    const {exercises, loading, filter} = props;
+    const {assignments, loading, filter} = props;
 
     const renderLoading = () => {
         return (
@@ -24,28 +24,29 @@ export default function Results(props){
         )
     }
 
-    const exercisesFilter = (exercise) => {
+    const assignmentFilter = (assignment) => {
         // TODO: Implement filter
-        console.log(filter, exercise);
-        return exercise.id >= 1;
+        console.log(filter, assignment);
+        return assignment.id >= 1;
     }   
 
-    const renderExercises = () => {
-        let filteredExercises = exercises.filter(exercisesFilter);
-        if(filteredExercises.length === 0){
+    const renderAssignments = () => {
+        let filteredAssignments = assignments.filter(assignmentFilter);
+
+        if(filteredAssignments.length === 0){
             return noResults();
         }
+
         // TODO: Implement sort
+
         return (
             <>
-                <div>
-                    <div className='grid lg:grid-cols-2 gap-4'>
-                        {filteredExercises.map((exercise) => {
-                            return (
-                                <AssignmentCard exercise={exercise} key={exercise.id} />
-                            )
-                        })}
-                    </div>
+                <div className='grid lg:grid-cols-2 gap-4'>
+                    {filteredAssignments.map((assignment) => {
+                        return (
+                            <AssignmentCard assignment={assignment} key={assignment.id} />
+                        )
+                    })}
                 </div>
             </>
         )
@@ -59,7 +60,7 @@ export default function Results(props){
                     Assignments
                 </div>
             </div>
-            {loading ? renderLoading() : renderExercises()}
+            {loading ? renderLoading() : renderAssignments()}
         </>
     )
 }

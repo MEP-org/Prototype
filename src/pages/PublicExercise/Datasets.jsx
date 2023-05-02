@@ -37,20 +37,20 @@ export default function Datasets(props){
                             <div>
                                 <div className="flex center">
                                     <p className="text-sm font-semibold truncate">
-                                        {datasets.train.name}
+                                        {datasets.train_name}
                                     </p>
                                     <p className="text-xs font-light truncate ml-1">
-                                        ({datasets.train.size} bytes)
+                                        ({datasets.train_size} bytes)
                                     </p>
                                 </div>
                                 <p className="mt-1 text-xs font-extralight truncate text-gray-400">
-                                    {datasets.train.uploadDate}
+                                    {datasets.train_uploadDate}
                                 </p>
                             </div>
 
                             <BsCloudDownload 
                                 className="w-5 h-5 justify-self-end cursor-pointer text-gray-500 hover:text-green-500"
-                                onClick={(event) => downloadFile(event, datasets.train.url)} 
+                                onClick={(event) => downloadFile(event, datasets.train_url)} 
                             />
                         </div>
                     </div>

@@ -29,7 +29,7 @@ export default function ExercisesTab(props){
             title: "Evaluation Rules", 
             icon: BiCog, 
             content: loading ? renderLoading() : 
-            <Evaluation handleChange={handleChange} exercise={exercise} />
+            <Evaluation handleChange={handleChange} exercise={exercise} metrics={metrics} />
         },
         {
             title: "Datasets", 

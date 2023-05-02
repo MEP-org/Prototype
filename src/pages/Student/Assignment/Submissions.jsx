@@ -156,8 +156,9 @@ export default function Submissions(props){
                     </Modal>
                 </div>
     
-    
-                <PreviousSubmissions submissions={submissions} />
+                {/* { results && (
+                    <PreviousSubmissions submissions={submissions} />
+                )} */}
             </>
         )
     }

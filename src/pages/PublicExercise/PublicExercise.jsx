@@ -1,27 +1,22 @@
 import React, { useEffect, useState } from "react"
 import { useParams } from 'react-router-dom';
 import PublicExerciseTab from "./PublicExerciseTab";
-import { ExercisesAPI } from "../../../api/ExercisesAPI";
 import Banner from "./Banner";
-import { PublicExercise as PublicExerciseInit } from "../../../model/PublicExercise";
+import { PublicAPI } from "../../api/PublicAPI";
 
 
 export default function PublicExercise(){
 
     const { exerciseId } = useParams();
     const [loading, setLoading] = useState(false);
-    const [publicExercise, setPublicExercise] = useState(PublicExerciseInit);
+    const [publicExercise, setPublicExercise] = useState({});
 
 
     useEffect(() => {
         setLoading(true);
-        ExercisesAPI.getPublicExerciseById(exerciseId)
-        .then((data) => {
-            setPublicExercise(data);
-        })
-        .finally(() => {
-            setLoading(false);
-        })
+        PublicAPI.getPublicExercise(exerciseId)
+        .then((data) => { setPublicExercise(data) })
+        .finally(() => { setLoading(false) })
     }, []);
 
     

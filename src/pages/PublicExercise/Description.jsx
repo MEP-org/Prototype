@@ -1,4 +1,4 @@
-import MarkdownViewer from "../../../components/MarkdownViewer";
+import MarkdownViewer from "../../components/MarkdownViewer";
 import { Spinner } from "flowbite-react";
 
 export default function Description(props){

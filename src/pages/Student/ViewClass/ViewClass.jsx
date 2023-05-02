@@ -6,7 +6,6 @@ import ExercisesLabel from './ExercisesLabel.jsx';
 import TableModal from './TableModal.jsx';
 
 import { useEffect, useState } from "react"
-import { ClassesAPI } from "../../../api/ClassesAPI";
 import {FaFileAlt} from 'react-icons/fa';
 
 
@@ -72,14 +71,7 @@ export default function ViewClass(){
 
 
     useEffect(() => {
-        setLoading(true);
-        ClassesAPI.getByClassName('ML-C1')
-        .then((data) => {
-            setClasses(data[0]);
-        })
-        .finally(() => {
-            setLoading(false);
-        })
+
     }, []);
 
 

@@ -5,13 +5,13 @@ import { useNavigate } from "react-router-dom"
 
 import ClassNameModal from "./ClassNameModal"
 
-export default function Banner({classData, setClassData}) {
+export default function Banner({classData, setClassData, loading}) {
 
     const [showModal, setShowModal] = useState(false)
     const navigate = useNavigate()
 
     useEffect(() => {
-        if (classData.id === undefined) setShowModal(true)
+        if (classData.id === undefined && loading) setShowModal(true)
     }, [classData.id])
 
     const handleSubmit = () => {
@@ -27,7 +27,7 @@ export default function Banner({classData, setClassData}) {
             const reader = new FileReader();
             reader.readAsDataURL(file);
             reader.onload = () => {
-                setClassData({...classData, img: reader.result})
+                setClassData({...classData, image: reader.result})
             };
         }
         input.click();
@@ -44,7 +44,7 @@ export default function Banner({classData, setClassData}) {
 
             <div className="mb-8">
                 <div className="font-bold text-5xl">
-                    {classData.id ? 
+                    {classData.id !== undefined ?
                         'View/Edit Class' : 
                         'Create new Class'
                     }
@@ -54,7 +54,7 @@ export default function Banner({classData, setClassData}) {
             <div className="grid grid-cols-3 gap-6">
                 
                 <div className='drop-shadow-lg h-52 relative'>
-                    <img src={classData.img} alt="class img" className="h-full w-full object-cover rounded-lg"/>
+                    <img src={classData.image} alt="class img" className="h-full w-full object-cover rounded-lg"/>
                     <div className="absolute top-0 right-0 p-4">
                         <Button className="dark:bg-gray-800 hover:!text-blue-500 dark:!border-gray-800" color='light' onClick={handleEditImage}>
                             <FaEdit size={20} />
@@ -85,7 +85,7 @@ export default function Banner({classData, setClassData}) {
                         </div>
                     </div>
                     <div className="grid grid-cols-3 gap-x-10 gap-y-4">
-                        <Button className='dark:bg-gray-800' color='light'>
+                        <Button className='dark:bg-gray-800' color='light' onClick={() => navigate('/professor/exercises')}>
                             <div className='w-40 text-center'>See exercises</div>
                             <FaEye />
                         </Button>
