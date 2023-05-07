@@ -8,7 +8,7 @@ export default function ClassCard(props){
     const navigate = useNavigate();
 
     const handleClassClick = (class_) => {
-        navigate(`/student/ViewClass`, {state : {class : class_}});
+        navigate(`/student/classes/${class_.id}`);
     }
 
 

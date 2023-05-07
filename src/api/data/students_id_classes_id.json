@@ -1,4 +1,4 @@
-[
+
     {
       "id": 1,
       "name": "Class 1",
@@ -10,7 +10,7 @@
           "name": "Rafael Gonçalves"
         }
       },
-      "image": "/media/image.png",
+      "image": "https://flowbite.com/docs/images/carousel/carousel-1.svg",
       "students": [
         {
           "id": 1,
@@ -30,4 +30,3 @@
         }
       ]
     }
-  ]

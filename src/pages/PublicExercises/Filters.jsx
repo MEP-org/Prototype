@@ -15,11 +15,13 @@ export default function FIlters(props){
     }
 
     const handleSearch = (e) => {
+        e.preventDefault();
         setFilter(myFilter);
     }
 
     return (
         <>
+            <form>
             <div className='grid grid-cols-7 gap-6'>
 
                 <div className='col-span-2 '>
@@ -85,18 +87,17 @@ export default function FIlters(props){
                         <option value="abcDown">Alphabetic down</option>
                         <option value="sizeUp">Size up</option>
                         <option value="sizeDown">Size down</option>
-                        <option value="nDownloadsUp">Downloads up</option>
-                        <option value="nDownloadsDown">Downloads down</option>
                     </Select>
                 </div>
 
                 <div>
                     <div className='mb-8' />
-                    <Button onClick={handleSearch} className='w-full'>
+                    <Button onClick={(e) => handleSearch(e)} className='w-full' type="submit">
                         Search
                     </Button>
                 </div>
             </div>
+            </form>
         </>
     )
 }

@@ -10,7 +10,7 @@ import Evaluation from "./Evaluation";
 
 export default function AssignmentTab(props){
 
-    const { assignment, loading } = props;
+    const { assignment, results, submission, loading } = props;
     const { description, evaluation, dataset } = assignment.exercise || {};
 
     return (
@@ -49,7 +49,7 @@ export default function AssignmentTab(props){
                     title="Results"
                     icon={BsBarChartFill}
                 >
-                    {/* <Results results={assignment.all_results} loading={loading} /> */}
+                    <Results my_results={assignment.my_results || []} all_results={results} loading={loading} />
                 </Tabs.Item>
 
 
@@ -57,7 +57,7 @@ export default function AssignmentTab(props){
                     title="Submission"
                     icon={BsFillCloudUploadFill}
                 >
-                    <Submissions submissions={assignment.submission} loading={loading} />
+                    <Submissions submission={submission} loading={loading} />
                 </Tabs.Item>
 
 

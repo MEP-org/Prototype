@@ -40,6 +40,14 @@
             "description": "Metric Description 1"
           },
           "score": 0.5
+        },
+        {
+          "metric": {
+            "id": 2,
+            "title": "Metric 2",
+            "description": "Metric Description 1"
+          },
+          "score": 0.9598
         }
       ]
     },

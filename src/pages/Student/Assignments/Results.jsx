@@ -25,19 +25,34 @@ export default function Results(props){
     }
 
     const assignmentFilter = (assignment) => {
-        // TODO: Implement filter
-        console.log(filter, assignment);
-        return assignment.id >= 1;
+        return (
+            assignment.title.toLowerCase().includes(filter.title.toLowerCase()) &&
+            (filter.deadline === 'all' || 
+            (filter.deadline === 'closed' && assignment.deadline < new Date()) ||
+            (filter.deadline === 'open' && assignment.deadline > new Date())
+            ) &&
+            (filter.filter === 'all' || 
+            (filter.filter == assignment.students_class.id))
+        )
     }   
 
-    const renderAssignments = () => {
-        let filteredAssignments = assignments.filter(assignmentFilter);
+    const sortAssignments = (a1, a2) => {
+        if(filter.sort === 'recent'){
+            return a1.publish_date < a2.publish_date;
+        } else if(filter.sort === 'oldest'){
+            return a1.publish_date > a2.publish_date;
+        } else if(filter.sort === 'closestDeadline'){
+            return a1.deadline < a2.deadline;
+        } else if(filter.sort === 'farthestDeadline'){
+            return a1.deadline > a2.deadline;
+        }
+    }
 
+    const renderAssignments = () => {
+        const filteredAssignments = assignments.filter(assignmentFilter).sort(sortAssignments);
         if(filteredAssignments.length === 0){
             return noResults();
         }
-
-        // TODO: Implement sort
 
         return (
             <>

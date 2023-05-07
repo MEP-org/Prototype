@@ -1,13 +1,13 @@
 import {useEffect, useState} from 'react';
 import {useParams} from 'react-router-dom';
-import { Spinner } from "flowbite-react"
 
 import Banner from './Banner';
 import StudentsTable from './StudentsTable';
-import { ProfessorAPI } from '../../../api/ProfessorAPI';
+import { StudentAPI } from '../../../api/StudentAPI';
+import { Spinner } from "flowbite-react"
 
-export default function ManageClass(){
-    const profId = 1;
+export default function Class() {
+    const studentId = 1;
 
     const id = useParams().id || undefined
     const [loading, setLoading] = useState(false)
@@ -15,16 +15,17 @@ export default function ManageClass(){
         "id": undefined,
         "name": '',
         "image": "https://flowbite.com/docs/images/carousel/carousel-1.svg",
+        "created_by": { "user": { "name": '' } },
         "students": []
     })
 
     useEffect(() => {
-        if (id === undefined) return
         setLoading(true)
-        ProfessorAPI.getClass(profId, id)
+        StudentAPI.getClass(studentId, id)
         .then((data) => { setClassData(data) })
         .finally(() => { setLoading(false) })
     }, [id])
+
 
     const renderLoading = () => {
         return (

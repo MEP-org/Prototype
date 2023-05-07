@@ -10,6 +10,8 @@ export default function Assignment(){
     const { assignmentId } = useParams();
     const [loading, setLoading] = useState(false);
     const [assignment, setAssignment] = useState({});
+    const [submission, setSubmission] = useState({});
+    const [results, setResults] = useState({});
     const studentId = 1;
 
 
@@ -19,6 +21,8 @@ export default function Assignment(){
         StudentAPI.getAssignment(studentId, assignmentId)
         .then((data) => {
             setAssignment(data.assignment);
+            setSubmission(data.submission);
+            setResults(data.all_results);
         })
         .finally(() => {
             setLoading(false);
@@ -31,7 +35,7 @@ export default function Assignment(){
         <>
             <div className='w-full container mt-8'>
                 <Banner exercise={assignment.exercise || {}} loading={loading} />
-                <AssignmentTab assignment={assignment} loading={loading} />
+                <AssignmentTab assignment={assignment} submission={submission} results={results} loading={loading} />
             </div>
         </>
     )
