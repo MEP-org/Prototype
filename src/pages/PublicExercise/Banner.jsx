@@ -35,14 +35,14 @@ export default function Description(props) {
                         <div className="lg:text-right lg:mb-3"> 
                             <span id="badge-dismiss-green" className="inline-flex items-center px-2 py-1 text-sm font-medium text-green-800 bg-green-100 rounded dark:bg-green-900 dark:text-green-300">
                                 <FaGlobeAmericas className='inline-block mr-2' size={12}  />
-                                {exercise.visible ? 'Public' : 'Private'}
+                                {exercise.visibility ? 'Public' : 'Private'}
                             </span>
                         </div>
 
                         <div className='lg:text-right'>
                             <span className="inline-block text-xs font-light pr-1">Published:</span>
                             <span className="inline-block text-xs font-bold">
-                                {exercise.publishingDate}
+                                {exercise.publish_date}
                             </span>
                         </div>
                     </div>

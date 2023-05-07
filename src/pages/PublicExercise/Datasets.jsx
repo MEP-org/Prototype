@@ -4,7 +4,7 @@ import { BsCloudDownload } from 'react-icons/bs';
 
 export default function Datasets(props){
 
-    const { datasets, loading } = props;
+    const { dataset, loading } = props;
 
 
     const downloadFile = (event, downloadLink) => {
@@ -26,7 +26,7 @@ export default function Datasets(props){
 
         return (
             <>
-                <p className='mb-2 font-semibold text-2xl'>Exercise Datasets</p>
+                <p className='mb-2 font-semibold text-2xl'>Exercise Dataset</p>
 
                 <div className='grid grid-cols-2 gap-4'>
                     <div className="bg-white dark:bg-gray-800 rounded-lg border dark:border-gray-700 shadow-md p-3">
@@ -37,20 +37,20 @@ export default function Datasets(props){
                             <div>
                                 <div className="flex center">
                                     <p className="text-sm font-semibold truncate">
-                                        {datasets.train_name}
+                                        {dataset.train_name}
                                     </p>
                                     <p className="text-xs font-light truncate ml-1">
-                                        ({datasets.train_size} bytes)
+                                        ({dataset.train_size} bytes)
                                     </p>
                                 </div>
                                 <p className="mt-1 text-xs font-extralight truncate text-gray-400">
-                                    {datasets.train_uploadDate}
+                                    {dataset.train_uploadDate}
                                 </p>
                             </div>
 
                             <BsCloudDownload 
                                 className="w-5 h-5 justify-self-end cursor-pointer text-gray-500 hover:text-green-500"
-                                onClick={(event) => downloadFile(event, datasets.train_url)} 
+                                onClick={(event) => downloadFile(event, dataset.train_url)} 
                             />
                         </div>
                     </div>

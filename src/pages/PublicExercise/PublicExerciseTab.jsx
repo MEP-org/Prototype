@@ -28,7 +28,7 @@ export default function PublicExerciseTab(props){
                     title="Datasets"
                     icon={BsDatabaseDown}
                 >
-                    <Datasets datasets={exercise.datasets} loading={loading} />
+                    <Datasets dataset={exercise.dataset || {}} loading={loading} />
                 </Tabs.Item>
 
             </Tabs.Group>

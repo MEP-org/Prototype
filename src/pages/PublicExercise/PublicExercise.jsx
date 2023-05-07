@@ -15,7 +15,10 @@ export default function PublicExercise(){
     useEffect(() => {
         setLoading(true);
         PublicAPI.getPublicExercise(exerciseId)
-        .then((data) => { setPublicExercise(data) })
+        .then((data) => {
+            setLoading(false);
+            setPublicExercise(data.public_exercise);
+        })
         .finally(() => { setLoading(false) })
     }, []);
 
