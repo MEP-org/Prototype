@@ -35,7 +35,7 @@ export default function Datasets(props){
 
                         <div className="flex items-center justify-between w-full p-2">
                             <div>
-                                <div className="flex center">
+                                <div className="flex items-center">
                                     <p className="text-sm font-semibold truncate">
                                         {dataset.train_name}
                                     </p>
@@ -44,7 +44,7 @@ export default function Datasets(props){
                                     </p>
                                 </div>
                                 <p className="mt-1 text-xs font-extralight truncate text-gray-400">
-                                    {dataset.train_uploadDate}
+                                    {dataset.train_upload_date}
                                 </p>
                             </div>
 
