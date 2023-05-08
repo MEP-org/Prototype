@@ -17,7 +17,7 @@ export default function PublicExercise(){
         PublicAPI.getPublicExercise(exerciseId)
         .then((data) => {
             setLoading(false);
-            setPublicExercise(data.public_exercise);
+            setPublicExercise(data);
         })
         .finally(() => { setLoading(false) })
     }, []);

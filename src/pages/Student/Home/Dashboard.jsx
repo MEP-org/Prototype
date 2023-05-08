@@ -31,7 +31,7 @@ export default function Dashboard(props){
                         <div className="h-24 flex justify-center items-center">
                             <div className="items-end">
                                 <span className="font-semibold text-3xl mr-2">{stats.num_submissions}</span>
-                                <span className="font-light text-sm">Total Submissions</span>
+                                <span className="font-light text-sm">Submissions</span>
                             </div>
                         </div>
                     </div>
