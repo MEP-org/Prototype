@@ -29,6 +29,7 @@ export default function ManageExercise(props){
         },
         results: []
     })
+    const [results, setResutls] = useState([])
 
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -38,11 +39,16 @@ export default function ManageExercise(props){
     useEffect(() => {
         setLoading(true)
         ProfessorAPI.getExercise(profId, id).then((data) => {
-            if (id !== undefined) setExercise(data.exercise)
-            setMetrics(data.metrics)
-            setClasses([])
+            if (id !== undefined) {
+                setExercise(data.exercise)
+                setResutls(data.results)
+            }
         })
-        .finally(() => setLoading(false))
+        .finally(() => {
+            setMetrics([])
+            setClasses([])
+            setLoading(false)
+        })
     }, [id])
 
 
@@ -57,6 +63,7 @@ export default function ManageExercise(props){
                     exercise={exercise} 
                     classes={classes}
                     metrics={metrics}
+                    results={results}
                     handleChange={handleChange} 
                     loading={loading} 
                 />

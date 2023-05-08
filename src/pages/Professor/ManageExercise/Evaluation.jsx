@@ -1,7 +1,6 @@
 import{ useState } from 'react'
 import { Label, TextInput, Dropdown, Checkbox } from 'flowbite-react'
 import Select from 'react-select';
-import makeAnimated from 'react-select/animated';
 
 import DatePicker from "tailwind-datepicker-react"
 import MarkdownEditor from "../../../components/MarkdownEditor"
@@ -22,14 +21,15 @@ export default function Evaluation(props){
         handleChange({target: {name: "evaluationRules", value: value}})
     }
 
-    const animatedComponents = makeAnimated();
-    const metricsTemp= [
-        { value: 'accuracy', label: 'Accuracy' },
-        { value: 'precision', label: 'Precision' },
-        { value: 'recall', label: 'Recall' },
-        { value: 'f1', label: 'F1' },
-        { value: 'roc_auc', label: 'ROC AUC' },
+    const metricsOptions= [
+        { value: 1, label: 'Accuracy' },
+        { value: 2, label: 'Precision' },
+        { value: 3, label: 'Recall' },
+        { value: 4, label: 'F1' },
+        { value: 5, label: 'ROC AUC' },
     ]
+
+    const inicialMetrics = exercise.metrics? exercise.metrics.map((m) => { return {value: m.id, label: m.title}}) : []
 
     const customClassNames = {
         control: (state) => {
@@ -56,7 +56,7 @@ export default function Evaluation(props){
         }
 
     };
-      
+
 
 	return (
         <>
@@ -96,10 +96,9 @@ export default function Evaluation(props){
                     <div className='mt-2'/>
                     <Select
                         closeMenuOnSelect={false}
-                        components={animatedComponents}
-                        defaultValue={[]}
+                        defaultValue={inicialMetrics}
                         isMulti
-                        options={metricsTemp}
+                        options={metricsOptions}
                         classNames={customClassNames}
                         className='z-20'
                         isSearchable={true}                        

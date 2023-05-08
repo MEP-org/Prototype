@@ -8,7 +8,7 @@ import Results from "./Results"
 
 export default function ExercisesTab(props){
 
-    const {handleChange, exercise, classes, metrics, loading} = props
+    const {handleChange, exercise, classes, metrics, results, loading} = props
 
     const renderLoading = () => {
         return (
@@ -41,7 +41,7 @@ export default function ExercisesTab(props){
             title: "Results", 
             icon: BsBarChartFill, 
             content: loading ? renderLoading() : 
-            <Results exercise={exercise} />
+            <Results exercise={exercise} results={results} />
         },
     ]
     if (!exercise.id) tabs.pop() // remove results tab if exercise is not created yet

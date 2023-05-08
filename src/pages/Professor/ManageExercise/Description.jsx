@@ -30,6 +30,7 @@ export default function Description(props){
                     <Label>Class</Label>
                     <Select
                         name="studentClass"
+                        value={exercise.students_class.id || ""} 
                         onChange={handleChange}
                         className="w-full mt-2"
                     >
