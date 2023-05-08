@@ -8,7 +8,7 @@ import Results from "./Results"
 
 export default function ExercisesTab(props){
 
-    const {handleChange, exercise, classes, metrics, results, loading} = props
+    const {handleChange, exercise, classes, metrics, results, loading, setExercise} = props
 
     const renderLoading = () => {
         return (
@@ -23,7 +23,7 @@ export default function ExercisesTab(props){
             title: "Description",
             icon: BsFileRichtextFill, 
             content: loading ? renderLoading() : 
-            <Description handleChange={handleChange} exercise={exercise} classes={classes}/>
+            <Description handleChange={handleChange} exercise={exercise} classes={classes} setExercise={setExercise} />
         },
         {
             title: "Evaluation Rules", 

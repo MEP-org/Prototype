@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { Button} from "flowbite-react"
-import { FaPlusCircle, FaEye, FaEdit} from "react-icons/fa"
+import { FaPlusCircle, FaEye, FaEdit, FaTrash} from "react-icons/fa"
 import { useNavigate } from "react-router-dom"
 
 import ClassNameModal from "./ClassNameModal"
@@ -33,6 +33,11 @@ export default function Banner({classData, setClassData, loading}) {
         input.click();
     }
 
+    const handleDelete = () => {
+        console.log('delete')
+        navigate('/professor/classes')
+    }
+
     return (
         <>
             <ClassNameModal 
@@ -47,6 +52,11 @@ export default function Banner({classData, setClassData, loading}) {
                     {classData.id !== undefined ?
                         'View/Edit Class' : 
                         'Create new Class'
+                    }
+                    {classData.id !== undefined &&
+                        <div className="inline-block cursor-pointer text-red-700 hover:text-red-500 ml-2">
+                            <FaTrash size={32} onClick={handleDelete}/>
+                        </div>
                     }
                 </div>
             </div>

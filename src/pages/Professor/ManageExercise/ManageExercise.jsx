@@ -38,17 +38,24 @@ export default function ManageExercise(props){
 
     useEffect(() => {
         setLoading(true)
-        ProfessorAPI.getExercise(profId, id).then((data) => {
-            if (id !== undefined) {
-                setExercise(data.exercise)
-                setResutls(data.results)
-            }
+        ProfessorAPI.getMetricsClasses(profId).then((data) => {
+            setClasses(data.classes)
+            setMetrics(data.metrics)
         })
         .finally(() => {
-            setMetrics([])
-            setClasses([])
             setLoading(false)
         })
+
+        if (id !== undefined) {
+            setLoading(true)
+            ProfessorAPI.getExercise(profId, id).then((data) => {
+                setExercise(data.exercise)
+                setResutls(data.results)
+            })
+            .finally(() => {
+                setLoading(false)
+            })
+        }   
     }, [id])
 
 
@@ -66,6 +73,7 @@ export default function ManageExercise(props){
                     results={results}
                     handleChange={handleChange} 
                     loading={loading} 
+                    setExercise={setExercise}
                 />
             </div>
             

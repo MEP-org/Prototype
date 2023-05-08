@@ -25,7 +25,6 @@ export default function Results(props){
     }
 
     const exercisesFilter = (exercise) => {
-        console.log(filter);
         return (
             exercise.title.toLowerCase().includes(filter.title.toLowerCase()) &&
             (filter.filter === 'all' || 

@@ -16,7 +16,7 @@
     "metrics": [
       {
         "id": 1,
-        "title": "Metric 1",
+        "title": "Precision",
         "description": "Metric Description 1",
         "created_by": {
           "id": 1,
@@ -29,7 +29,7 @@
       },
       {
         "id": 2,
-        "title": "Metric 2",
+        "title": "Accuracy",
         "description": "Metric Description 2",
         "created_by": {
           "id": 1,

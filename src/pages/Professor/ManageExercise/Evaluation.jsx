@@ -21,13 +21,7 @@ export default function Evaluation(props){
         handleChange({target: {name: "evaluationRules", value: value}})
     }
 
-    const metricsOptions= [
-        { value: 1, label: 'Accuracy' },
-        { value: 2, label: 'Precision' },
-        { value: 3, label: 'Recall' },
-        { value: 4, label: 'F1' },
-        { value: 5, label: 'ROC AUC' },
-    ]
+    const metricsOptions= metrics.map((m) => { return {value: m.id, label: m.title}})
 
     const inicialMetrics = exercise.metrics? exercise.metrics.map((m) => { return {value: m.id, label: m.title}}) : []
 

@@ -7,7 +7,6 @@ export default function FIlters(props){
     let myFilter = filter;
     
     const handleFilter = (e, key) => {
-        console.log(e.target.value);
         myFilter = {
             ...myFilter,
             [key]: e.target.value
